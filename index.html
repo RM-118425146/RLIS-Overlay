@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&display=swap');
+  </style>
+</head>
+
+<div>
+    <link href="CSS/RLIS-Overlay.css" rel="stylesheet" />
+    <div class="overlay-container">
+        <div class="overlay-overlay-top">
+            <div class="overlay-top-left-spacer"></div>
+            <div class="overlay-scoreboard">
+                <div class="overlay-scoreboard-top">
+                    <div class="overlay-full-score-area">
+                        <div class="overlay-blue-scoreboard-area">
+                            <div class="overlay-blue-series-score">
+                                <span class="overlay-blue-g4">__</span>
+                                <span class="overlay-blue-g3">__</span>
+                                <span class="overlay-blue-b2">__</span>
+                                <span class="overlay-blue-b1">__</span>
+                            </div>
+                            <div class="overlay-blue-logo-area">
+                                <img src="Images/irish_wolfhounds.png" style="height:75px; width:auto;"/>
+                            </div>
+                            <div class="overlay-blue-team-name-area">
+                                <span class="overlay-blue-team-name">
+                                  <span>Team Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                            <div class="overlay-blue-score-area">
+                                <span class="overlay-blue-score">0</span>
+                            </div>
+                        </div>
+                        <div class="overlay-timer-area">
+                            <span class="overlay-timer">5:00</span>
+                        </div>
+                        <div class="overlay-orange-scoreboard-area">
+                            <div class="overlay-orange-score-area">
+                                <span class="overlay-orange-score">0</span>
+                            </div>
+                            <div class="overlay-orange-team-name-area">
+                                <span class="overlay-orange-team-name">
+                                  <span>Team Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                            <div class="overlay-orange-logo-area">
+                                <img src="Images/the_high_kings.png" style="height:75px; width:auto;"/>
+                            </div>
+                            <div class="overlay-orange-series-score">
+                                <span class="overlay-orange-g4">__</span>
+                                <span class="overlay-orange-g3">__</span>
+                                <span class="overlay-orange-g2">__</span>
+                                <span class="overlay-orange-g1">__</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-scoreboard-bottom">
+                    <div class="overlay-left-spacer"></div>
+                    <div class="overlay-info-area">
+                        <div class="overlay-info-area-left">
+                          <span class="overlay-info-left-text">
+                            <span>RL Ireland Superstars</span>
+                            <br />
+                          </span>
+                        </div>
+                        <div class="overlay-info-area-right">
+                            <span class="overlay-info-right-text">BO5</span>
+                        </div>
+                    </div>
+                    <div class="overlay-right-spacer"></div>
+                </div>
+            </div>
+            <div class="overlay-top-right-spacer"></div>
+        </div>
+        <div class="overlay-overlay-middle">
+            <div class="overlay-top-spacer"></div>
+            <div class="overlay-name-info-area">
+                <div class="overlay-blue-names">
+                    <div class="overlay-blue-name-1-area">
+                        <div class="overlay-blue-info-area-1">
+                            <div class="overlay-blue-name-1">
+                                <span class="overlay-blue-name-1-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                            <div class="overlay-blue-stats-1">
+                                <div class="overlay-blue-goals-1">
+                                    <span class="overlay-blue-goals-text-1">GOALS</span>
+                                    <span class="overlay-blue-goals-amount-1">0</span>
+                                </div>
+                                <div class="overlay-blue-shots-1">
+                                    <span class="overlay-blue-shots-text-1">SHOTS</span>
+                                    <span class="overlay-blue-shots-amount-1">0</span>
+                                </div>
+                                <div class="overlay-blue-assists-1">
+                                    <span class="overlay-blue-assists-text-1">ASSISTS</span>
+                                    <span class="overlay-blue-assists-amount-1">0</span>
+                                </div>
+                                <div class="overlay-blue-saves-1">
+                                    <span class="overlay-blue-saves-text-1">SAVES</span>
+                                    <span class="overlay-blue-saves-amount-1">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overlay-blue-boost-area-1"  id="bluePlayerBoost1">
+                            <span class="overlay-blue-boost-amount-1">0</span>
+                        </div>
+                    </div>
+                    <div class="overlay-blue-name-2-area">
+                        <div class="overlay-blue-info-area-2">
+                            <div class="overlay-blue-name-2">
+                                <span class="overlay-blue-name-2-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                            <div class="overlay-blue-stats-2">
+                                <div class="overlay-blue-goals-2">
+                                    <span class="overlay-blue-goals-text-2">GOALS</span>
+                                    <span class="overlay-blue-goals-amount-2">0</span>
+                                </div>
+                                <div class="overlay-blue-shots-2">
+                                    <span class="overlay-blue-shots-text-2">SHOTS</span>
+                                    <span class="overlay-blue-shots-amount-2">0</span>
+                                </div>
+                                <div class="overlay-blue-assists-2">
+                                    <span class="overlay-blue-assists-text-2">ASSISTS</span>
+                                    <span class="overlay-blue-assists-amount-2">0</span>
+                                </div>
+                                <div class="overlay-blue-saves-2">
+                                    <span class="overlay-blue-saves-text-2">SAVES</span>
+                                    <span class="overlay-blue-saves-amount-2">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overlay-blue-boost-area-2" id="bluePlayerBoost2">
+                            <span class="overlay-blue-boost-amount-2">0</span>
+                        </div>
+                    </div>
+                    <div class="overlay-blue-name-3-area">
+                        <div class="overlay-blue-info-area-3">
+                            <div class="overlay-blue-name-3">
+                                <span class="overlay-blue-name-3-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                            <div class="overlay-blue-stats-3">
+                                <div class="overlay-blue-goals-3">
+                                    <span class="overlay-blue-goals-text-3">GOALS</span>
+                                    <span class="overlay-blue-goals-amount-3">0</span>
+                                </div>
+                                <div class="overlay-blue-shots-3">
+                                    <span class="overlay-blue-shots-text-3">SHOTS</span>
+                                    <span class="overlay-blue-shots-amount-3">0</span>
+                                </div>
+                                <div class="overlay-blue-assists-3">
+                                    <span class="overlay-blue-assists-text-3">ASSISTS</span>
+                                    <span class="overlay-blue-assists-amount-3">0</span>
+                                </div>
+                                <div class="overlay-blue-saves-3">
+                                    <span class="overlay-blue-saves-text-3">SAVES</span>
+                                    <span class="overlay-blue-saves-amount-3">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overlay-blue-boost-area-3" id="bluePlayerBoost3">
+                            <span class="overlay-blue-boost-amount-3">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-name-info-spacer"></div>
+                <div class="overlay-orange-names">
+                    <div class="overlay-orange-name-1-area">
+                        <div class="overlay-orange-info-area-1">
+                            <div class="overlay-orange-stats-1">
+                                <div class="overlay-orange-saves-1">
+                                    <span class="overlay-orange-saves-text-1">SAVES</span>
+                                    <span class="overlay-orange-saves-amount-1">0</span>
+                                </div>
+                                <div class="overlay-orange-assits-1">
+                                    <span class="overlay-orange-assists-text-1">ASSISTS</span>
+                                    <span class="overlay-orange-assists-amount-1">0</span>
+                                </div>
+                                <div class="overlay-orange-shots-1">
+                                    <span class="overlay-orange-shots-text-1">SHOTS</span>
+                                    <span class="overlay-orange-shots-amount-1">0</span>
+                                </div>
+                                <div class="overlay-orange-goals-1">
+                                    <span class="overlay-orange-goals-text-1">GOALS</span>
+                                    <span class="overlay-orange-goals-amount-1">0</span>
+                                </div>
+                            </div>
+                            <div class="overlay-orange-name-1">
+                                <span class="overlay-orange-name-1-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overlay-orange-boost-area-1" id="orangePlayerBoost1">
+                            <span class="overlay-orange-boost-amount-1" >0</span>
+                        </div>
+                    </div>
+                    <div class="overlay-orange-name-2-area">
+                        <div class="overlay-orange-info-area-2">
+                            <div class="overlay-orange-stats-2">
+                                <div class="overlay-orange-saves-2">
+                                    <span class="overlay-orange-saves-text-2">SAVES</span>
+                                    <span class="overlay-orange-saves-amount-2">0</span>
+                                </div>
+                                <div class="overlay-orange-assists-2">
+                                    <span class="overlay-orange-assists-text-2">ASSISTS</span>
+                                    <span class="overlay-orange-assists-amount-2">0</span>
+                                </div>
+                                <div class="overlay-orange-shots-2">
+                                    <span class="overlay-orange-shots-text-2">SHOTS</span>
+                                    <span class="overlay-orange-shots-amount-2">0</span>
+                                </div>
+                                <div class="overlay-orange-goals-2">
+                                    <span class="overlay-orange-goals-text-2">GOALS</span>
+                                    <span class="overlay-orange-goals-amount-2">0</span>
+                                </div>
+                            </div>
+                            <div class="overlay-orange-name-2">
+                                <span class="overlay-orange-name-2-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overlay-orange-boost-area-2"  id="orangePlayerBoost2">
+                            <span class="overlay-orange-boost-amount-2">0</span>
+                        </div>
+                    </div>
+                    <div class="overlay-orange-name-3-area">
+                        <div class="overlay-orange-info-area-3">
+                            <div class="overlay-orange-stats-3">
+                                <div class="overlay-orange-saves-3">
+                                    <span class="overlay-orange-saves-text-3">SAVES</span>
+                                    <span class="overlay-orange-saves-amount-3">0</span>
+                                </div>
+                                <div class="overlay-orange-assists-3">
+                                    <span class="overlay-orange-assists-text-3">ASSISTS</span>
+                                    <span class="overlay-orange-assists-amount-3">0</span>
+                                </div>
+                                <div class="overlay-orange-shots-3">
+                                    <span class="overlay-orange-shots-text-3">SHOTS</span>
+                                    <span class="overlay-orange-shots-amount-3">0</span>
+                                </div>
+                                <div class="overlay-orange-goals-3">
+                                    <span class="overlay-orange-goals-text-3">GOALS</span>
+                                    <span class="overlay-orange-goals-amount-3">0</span>
+                                </div>
+                            </div>
+                            <div class="overlay-orange-name-3">
+                                <span class="overlay-orange-name-3-text">
+                                  <span>Player Name</span>
+                                  <br />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overlay-orange-boost-area-3" id="orangePlayerBoost3">
+                            <span class="overlay-orange-boost-amount-3" >0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-overlay-bottom"></div>
+    </div>
+</div>
+
+<script src="JS/RLIS-Overlay.js"></script>
+</html>
