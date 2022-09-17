@@ -150,6 +150,41 @@ $(() => {
 		let orangePlayerBoost1 = document.getElementById("orangePlayerBoost1");
 		let orangePlayerBoost2 = document.getElementById("orangePlayerBoost2");
 		let orangePlayerBoost3 = document.getElementById("orangePlayerBoost3");
+
+		let bluePlayer1 = document.getElementById("bluePlayer1");
+		let bluePlayer2 = document.getElementById("bluePlayer2");
+		let bluePlayer3 = document.getElementById("bluePlayer3");
+		let orangePlayer1 = document.getElementById("orangePlayer1");
+		let orangePlayer2 = document.getElementById("orangePlayer2");
+		let orangePlayer3 = document.getElementById("orangePlayer3");
+		let activeBlue = "linear-gradient(to left, #0074f0 40%, #003EB3)";
+		let inactiveBlue = "#0074f0";
+		let activeOrange = "linear-gradient(to left, #ff5000 60%, #ff6904)";
+		let inactiveOrange = "#ff6904";
+
+		var target = d['game']['target'];
+        if(target != "" && d['game']['isReplay'] == false){
+            orangePlayer1.style.visibility = 'visible';
+            orangePlayer2.style.visibility = 'visible';
+            orangePlayer3.style.visibility = 'visible';
+            bluePlayer1.style.visibility = 'visible';
+            bluePlayer2.style.visibility = 'visible';
+            bluePlayer3.style.visibility = 'visible';
+        }else{
+            orangePlayer1.style.visibility = 'hidden';
+            orangePlayer2.style.visibility = 'hidden';
+            orangePlayer3.style.visibility = 'hidden';
+            orangePlayer1.style.background = inactiveOrange;
+            orangePlayer2.style.background = inactiveOrange;
+            orangePlayer3.style.background = inactiveOrange;
+            bluePlayer1.style.visibility = 'hidden';
+            bluePlayer2.style.visibility = 'hidden';
+            bluePlayer3.style.visibility = 'hidden';
+            bluePlayer1.style.background = inactiveBlue;
+            bluePlayer2.style.background = inactiveBlue;
+            bluePlayer3.style.background = inactiveBlue;
+        }
+
 		Object.keys(d['players']).forEach((id) => {
 		    if(d['players'][id].team == 0){
 		        blueMembers += 1;
@@ -160,12 +195,33 @@ $(() => {
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-assists-" + blueMembers +" .overlay-blue-assists-amount-" + blueMembers).text(d['players'][id].assists);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-saves-" + blueMembers +" .overlay-blue-saves-amount-" + blueMembers).text(d['players'][id].saves);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-boost-area-" + blueMembers +" .overlay-blue-boost-amount-" + blueMembers).text(d['players'][id].boost);
+
 		        if(blueMembers == 1){
 		            bluePlayerBoost1.style.background = gradientAmount;
 		        }else if(blueMembers == 2){
 		            bluePlayerBoost2.style.background = gradientAmount;
 		        }else if(blueMembers == 3){
 		            bluePlayerBoost3.style.background = gradientAmount;
+		        }
+
+		        if (d['players'][id].id == d['game']['target']) {
+		            orangePlayer1.style.background = inactiveOrange;
+		            orangePlayer2.style.background = inactiveOrange;
+		            orangePlayer3.style.background = inactiveOrange;
+		            if((blueMembers - 3) == 0){
+		                bluePlayer3.style.background = activeBlue;
+		                console.log(activeBlue);
+		                bluePlayer2.style.background = inactiveBlue;
+		                bluePlayer1.style.background = inactiveBlue;
+		            }else if((blueMembers - 3) == -1){
+		                bluePlayer2.style.background = activeBlue;
+                        bluePlayer3.style.background = inactiveBlue;
+                        bluePlayer1.style.background = inactiveBlue;
+		            }else if((blueMembers - 3) == -2){
+                        bluePlayer1.style.background = activeBlue;
+                        bluePlayer3.style.background = inactiveBlue;
+                        bluePlayer2.style.background = inactiveBlue;
+		            }
 		        }
 		    }else if(d['players'][id].team == 1){
                 orangeMembers += 1;
@@ -176,6 +232,7 @@ $(() => {
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-assists-" + orangeMembers +" .overlay-orange-assists-amount-" + orangeMembers).text(d['players'][id].assists);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-saves-" + orangeMembers +" .overlay-orange-saves-amount-" + orangeMembers).text(d['players'][id].saves);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-boost-area-" + orangeMembers +" .overlay-orange-boost-amount-" + orangeMembers).text(d['players'][id].boost);
+
 		        if(orangeMembers == 1){
                     orangePlayerBoost1.style.background = gradientAmount;
                 }else if(orangeMembers == 2){
@@ -183,8 +240,28 @@ $(() => {
                 }else if(orangeMembers == 3){
                     orangePlayerBoost3.style.background = gradientAmount;
                 }
+
+                if (d['players'][id].id == d['game']['target']) {
+                    bluePlayer1.style.background = inactiveBlue;
+                    bluePlayer2.style.background = inactiveBlue;
+                    bluePlayer3.style.background = inactiveBlue;
+                    if((orangeMembers - 3) == 0){
+                        orangePlayer3.style.background = activeOrange;
+                        orangePlayer2.style.background = inactiveOrange;
+                        orangePlayer1.style.background = inactiveOrange;
+                    }else if((orangeMembers - 3) == -1){
+                        orangePlayer2.style.background = activeOrange;
+                        orangePlayer3.style.background = inactiveOrange;
+                        orangePlayer1.style.background = inactiveOrange;
+                    }else if((orangeMembers - 3) == -2){
+                        orangePlayer1.style.background = activeOrange;
+                        orangePlayer2.style.background = inactiveOrange;
+                        orangePlayer3.style.background = inactiveOrange;
+                    }
+                }
 		    }
         });
+
 	});
 
 });

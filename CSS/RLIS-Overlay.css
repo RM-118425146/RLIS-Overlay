@@ -217,7 +217,7 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: center;
-  background-color: #ff5504;
+  background-color: #ff5000;
   clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
 }
 .overlay-orange-score {
