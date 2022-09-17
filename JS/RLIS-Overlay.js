@@ -264,4 +264,25 @@ $(() => {
 
 	});
 
+	WsSubscribers.subscribe("game", "goal_scored", (e) => {
+    	  $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-scored-by-area .overlay-scored-by-player-name").text(e['scorer']['name']);
+          if(e['assister']['name'] == ""){
+            $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text("None");
+          }else{
+            $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text(e['assister']['name']);
+          }
+          var goalSpeed = Math.round(e['goalspeed']) + " KM/H";
+          $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-speed-area .overlay-speed-value").text(goalSpeed);
+    });
+
+	WsSubscribers.subscribe("game", "replay_start", (e) => {
+        let replayBanner = document.getElementById("replayBanner");
+        replayBanner.style.visibility = 'visible';
+    });
+
+    WsSubscribers.subscribe("game", "replay_end", (e) => {
+        let replayBanner = document.getElementById("replayBanner");
+        replayBanner.style.visibility = 'hidden'
+    });
+
 });
