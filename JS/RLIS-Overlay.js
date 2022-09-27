@@ -189,7 +189,7 @@ $(() => {
 		    if(d['players'][id].team == 0){
 		        blueMembers += 1;
 		        var gradientAmount = "linear-gradient(to right, orange " + d['players'][id].boost + "% , #595959 0% 100%)";
-		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-name-" + blueMembers +" .overlay-blue-name-" + blueMembers +"-text").text(d['players'][id].name);
+		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-name-area-" + blueMembers +"  .overlay-blue-name-" + blueMembers +" .overlay-blue-name-" + blueMembers +"-text").text(d['players'][id].name);
 		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-goals-" + blueMembers +" .overlay-blue-goals-amount-" + blueMembers).text(d['players'][id].goals);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-shots-" + blueMembers +" .overlay-blue-shots-amount-" + blueMembers).text(d['players'][id].shots);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-assists-" + blueMembers +" .overlay-blue-assists-amount-" + blueMembers).text(d['players'][id].assists);
@@ -226,7 +226,7 @@ $(() => {
 		    }else if(d['players'][id].team == 1){
                 orangeMembers += 1;
                 var gradientAmount = "linear-gradient(to right, #595959 " + (100 - d['players'][id].boost) + "%, orange 0% 100% )";
-                $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-name-" + orangeMembers +" .overlay-orange-name-" + orangeMembers +"-text").text(d['players'][id].name);
+                $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-name-area-" + orangeMembers +"  .overlay-orange-name-" + orangeMembers +" .overlay-orange-name-" + orangeMembers +"-text").text(d['players'][id].name);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-goals-" + orangeMembers +" .overlay-orange-goals-amount-" + orangeMembers).text(d['players'][id].goals);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-shots-" + orangeMembers +" .overlay-orange-shots-amount-" + orangeMembers).text(d['players'][id].shots);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-assists-" + orangeMembers +" .overlay-orange-assists-amount-" + orangeMembers).text(d['players'][id].assists);
@@ -265,13 +265,23 @@ $(() => {
 	});
 
 	WsSubscribers.subscribe("game", "goal_scored", (e) => {
-    	  $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-scored-by-area .overlay-scored-by-player-name").text(e['scorer']['name']);
+	      var scorer = " " + e['scorer']['name'];
+    	  $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-scored-by-area .overlay-scored-by-player-name").text(scorer);
+    	  let replayBanner = document.getElementById("replayBanner");
+    	  if(e['scorer']['teamnum'] == 0){
+    	    var gradientAmount = "linear-gradient(to top, #0074f0, #0000 85%)";
+    	    replayBanner.style.background = gradientAmount;
+    	  }else{
+    	    var gradientAmount = "linear-gradient(to top, #ff6904, #0000 85%)";
+    	    replayBanner.style.background = gradientAmount;
+    	  }
           if(e['assister']['name'] == ""){
             $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text("None");
           }else{
-            $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text(e['assister']['name']);
+            var assister = " " + e['assister']['name'];
+            $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text(assister);
           }
-          var goalSpeed = Math.round(e['goalspeed']) + " KM/H";
+          var goalSpeed = " " +  Math.round(e['goalspeed']) + " KM/H";
           $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-speed-area .overlay-speed-value").text(goalSpeed);
     });
 
