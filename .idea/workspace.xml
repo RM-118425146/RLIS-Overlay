@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="added first version of replay banner and js code for this">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
-    </list>
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="updated player stats styling and replay banner styling" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663454528115</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated player stats styling and replay banner styling">
+      <created>1664303561482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664303561482</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +102,7 @@
     <MESSAGE value="Added working scoreboard and playercards" />
     <MESSAGE value="changed index.html to RLIS-Overlay.html and added gradient to active player card" />
     <MESSAGE value="added first version of replay banner and js code for this" />
-    <option name="LAST_COMMIT_MESSAGE" value="added first version of replay banner and js code for this" />
+    <MESSAGE value="updated player stats styling and replay banner styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated player stats styling and replay banner styling" />
   </component>
 </project>
