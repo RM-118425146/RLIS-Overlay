@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&display=swap');
+  </style>
+</head>
+<body>
+
+<div>
+  <link href="CSS/Controller.css" rel="stylesheet" />
+  <div class="controller-container">
+    <div class="overlay-overlay-top">
+      <div class="overlay-top-left-spacer"></div>
+      <div class="overlay-scoreboard">
+        <div class="overlay-scoreboard-top">
+          <div class="overlay-full-score-area">
+            <div class="overlay-blue-scoreboard-area">
+              <div class="overlay-blue-series-score">
+                <span class="overlay-blue-g4">__</span>
+                <span class="overlay-blue-g3">__</span>
+                <span class="overlay-blue-b2">__</span>
+                <span class="overlay-blue-b1">__</span>
+              </div>
+              <div class="overlay-blue-logo-area">
+                <img src="Images/irish_wolfhounds_no_text.png" style="height:75px; width:auto;"/>
+              </div>
+              <div class="overlay-blue-team-name-area">
+                <span class="overlay-blue-team-name">
+                  <span>Team Name</span>
+                  <br />
+                </span>
+              </div>
+              <div class="overlay-blue-score-area">
+                <span class="overlay-blue-score">0</span>
+              </div>
+            </div>
+            <div class="overlay-timer-area">
+              <span class="overlay-timer">5:00</span>
+            </div>
+            <div class="overlay-orange-scoreboard-area">
+              <div class="overlay-orange-score-area">
+                <span class="overlay-orange-score">0</span>
+              </div>
+              <div class="overlay-orange-team-name-area">
+                <span class="overlay-orange-team-name">
+                  <span>Team Name</span>
+                  <br />
+                </span>
+              </div>
+              <div class="overlay-orange-logo-area">
+                <img src="Images/the_high_kings_no_text.png" style="height:75px; width:auto;"/>
+              </div>
+              <div class="overlay-orange-series-score">
+                <span class="overlay-orange-g4">__</span>
+                <span class="overlay-orange-g3">__</span>
+                <span class="overlay-orange-g2">__</span>
+                <span class="overlay-orange-g1">__</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-scoreboard-bottom">
+          <div class="overlay-left-spacer"></div>
+          <div class="overlay-info-area">
+            <div class="overlay-info-area-left">
+              <span class="overlay-info-left-text">
+                <span>RLIS 2022</span>
+                <br />
+              </span>
+            </div>
+            <div class="overlay-info-area-middle">
+              <span class="overlay-stage-text">
+                <span>Group Stage</span>
+                <br />
+              </span>
+            </div>
+            <div class="overlay-info-area-right">
+              <span class="overlay-info-right-text">BO5</span>
+            </div>
+          </div>
+          <div class="overlay-right-spacer"></div>
+        </div>
+      </div>
+      <div class="overlay-top-right-spacer"></div>
+    </div>
+    <div class="controller-general-info">
+      <div class="controller-left-spacer1"></div>
+      <div class="controller-auto-set-names-area">
+        <h1 class="controller-auto-set-names-text">
+          <span>Auto Set Names</span>
+          <br />
+        </h1>
+        <input
+        type="checkbox"
+        checked="true"
+        class="controller-chk-auto-set-names"
+        />
+      </div>
+      <div class="controller-auto-score-series-area">
+        <h1 class="controller-auto-score-series-text">
+          <span>Auto Score Series</span>
+          <br />
+        </h1>
+        <input
+        type="checkbox"
+        checked="true"
+        class="controller-chk-auto-score-series"
+        />
+      </div>
+      <div class="controller-tourney-abbrv-area">
+        <h1 class="controller-tourney-abbrv-text">
+          <span>Tournament abbrv.</span>
+          <br />
+        </h1>
+        <input
+        type="text"
+        placeholder="placeholder"
+        class="controller-txt-tourney-abbrv input"
+        />
+      </div>
+      <div class="controller-tourney-stage-area">
+        <h1 class="controller-tourney-stage-text">
+          <span>Tournament Stage</span>
+          <br />
+        </h1>
+        <select class="controller-select-stage">
+          <option value="none">None</option>
+          <option value="group">Group Stage</option>
+          <option value="playoffs">Playoffs</option>
+          <option value="finals">Grand Finals</option>
+        </select>
+      </div>
+      <div class="controller-no-series-area">
+        <button class="button">
+          <span>
+            <span>No Series</span>
+            <br />
+          </span>
+        </button>
+      </div>
+      <div class="controller-series-area">
+        <h1 class="controller-series-type-text-text">
+          <span>Series Type</span>
+          <br />
+        </h1>
+        <select class="controller-select-series">
+          <option value="bo3">Bo3</option>
+          <option value="bo5">Bo5</option>
+          <option value="bo7">Bo7</option>
+          <option value="bo9">Bo9</option>
+        </select>
+      </div>
+      <div class="controller-right-spacer1"></div>
+    </div>
+    <div class="controller-overlay-body">
+      <div class="controller-blue-controls">
+        <h1 class="controller-blue-controls-text">
+          <span>Blue Controls</span>
+          <br />
+        </h1>
+        <span class="controller-blue-name-text">
+          <span>Team Name</span>
+          <br />
+        </span>
+        <select>
+          <option value="celtic_tigers">Celtic Tigers</option>
+          <option value="irish_wolfhounds">Wolfhounds</option>
+          <option value="the_banshees">Banshees</option>
+          <option value="the_high_kings">High Kings</option>
+          <option value="the_saints">Saints</option>
+          <option value="setanta">Setanta</option>
+        </select>
+        <span class="controller-blue-score-text">
+          <span>Series Score</span>
+          <br />
+        </span>
+        <button class="button">
+          <span>
+            <span>+1 Game</span>
+            <br />
+          </span>
+        </button>
+        <button class="button">
+          <span>
+            <span>-1 Game</span>
+            <br />
+          </span>
+        </button>
+      </div>
+      <div class="controller-container1">
+        <h1 class="controller-orange-controls-text">
+          <span>Orange Conrols</span>
+          <br />
+        </h1>
+        <span class="controller-orange-name-text">
+          <span>Team Name</span>
+          <br />
+        </span>
+        <select>
+          <option value="celtic_tigers">Celtic Tigers</option>
+          <option value="irish_wolfhounds">Wolfhounds</option>
+          <option value="the_banshees">Banshees</option>
+          <option value="the_high_kings">High Kings</option>
+          <option value="the_saints">Saints</option>
+          <option value="setanta">Setanta</option>
+        </select>
+        <span class="controller-orange-score-text">
+          <span>Series Score</span>
+          <br />
+        </span>
+        <button class="button">
+          <span>
+            <span>+1 Game</span>
+            <br />
+          </span>
+        </button>
+        <button class="button">
+          <span>
+            <span>-1 Game</span>
+            <br />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

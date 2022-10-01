@@ -537,6 +537,7 @@
   height: auto;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-goals-amount-1 {
   color: rgb(255, 255, 255);
@@ -563,6 +564,7 @@
   height: auto;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-shots-amount-1 {
   color: rgb(255, 255, 255);
@@ -589,6 +591,7 @@
   height: auto;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-assists-amount-1 {
   color: rgb(255, 255, 255);
@@ -615,6 +618,7 @@
   height: auto;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-saves-amount-1 {
   color: rgb(255, 255, 255);
@@ -719,6 +723,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-goals-amount-2 {
   color: rgb(255, 255, 255);
@@ -744,6 +749,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-shots-amount-2 {
   color: rgb(255, 255, 255);
@@ -769,6 +775,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-assists-amount-2 {
   color: rgb(255, 255, 255);
@@ -794,6 +801,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-saves-amount-2 {
   color: rgb(255, 255, 255);
@@ -899,6 +907,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-goals-amount-3 {
   color: rgb(255, 255, 255);
@@ -924,6 +933,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-shots-amount-3 {
   color: rgb(255, 255, 255);
@@ -949,6 +959,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-assists-amount-3 {
   color: rgb(255, 255, 255);
@@ -974,6 +985,7 @@
   width: 25px;
   align-self: flex-end;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-blue-saves-amount-3 {
   color: rgb(255, 255, 255);
@@ -1100,6 +1112,7 @@
   width: 25px;
   align-self: center;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-goals-amount-1 {
   color: rgb(255, 255, 255);
@@ -1124,6 +1137,7 @@
 .overlay-orange-shot-image-1 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-shots-amount-1 {
   color: rgb(255, 255, 255);
@@ -1148,6 +1162,7 @@
 .overlay-orange-assist-image-1 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-assists-amount-1 {
   color: rgb(255, 255, 255);
@@ -1172,6 +1187,7 @@
 .overlay-orange-save-image-1 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-saves-amount-1 {
   color: rgb(255, 255, 255);
@@ -1276,6 +1292,7 @@
   width: 25px;
   align-self: center;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-goals-amount-2 {
   color: rgb(255, 255, 255);
@@ -1300,6 +1317,7 @@
 .overlay-orange-shot-image-2 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-shots-amount-2 {
   color: rgb(255, 255, 255);
@@ -1324,6 +1342,7 @@
 .overlay-orange-assist-image-2 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-assists-amount-2 {
   color: rgb(255, 255, 255);
@@ -1348,6 +1367,7 @@
 .overlay-orange-save-image-2 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-saves-amount-2 {
   color: rgb(255, 255, 255);
@@ -1452,6 +1472,7 @@
   width: 25px;
   align-self: center;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-goals-amount-3 {
   color: rgb(255, 255, 255);
@@ -1476,6 +1497,7 @@
 .overlay-orange-shot-image-3 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-shots-amount-3 {
   color: rgb(255, 255, 255);
@@ -1500,6 +1522,7 @@
 .overlay-orange-assist-image-3 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-assists-amount-3 {
   color: rgb(255, 255, 255);
@@ -1524,6 +1547,7 @@
 .overlay-orange-save-image-3 {
   width: 25px;
   object-fit: cover;
+  fill: #FFFFFF;
 }
 .overlay-orange-saves-amount-3 {
   color: rgb(255, 255, 255);
