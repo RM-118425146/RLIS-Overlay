@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="added images for player stats">
-      <change afterPath="$PROJECT_DIR$/CSS/Controller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/celtic_tigers_no_text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/irish_wolfhounds_no_text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/setanta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/setanta_no_text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/the_banshees_no_text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/the_high_kings_no_text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/the_saints_no_text.png" afterDir="false" />
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="added new team logo images, updated svg tags, created control panel page with styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/na_gaels.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,8 +96,26 @@
       <option name="project" value="LOCAL" />
       <updated>1664303764697</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added new team logo images, updated svg tags, created control panel page with styling">
+      <created>1664644483674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664644483675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -126,6 +134,7 @@
     <MESSAGE value="added first version of replay banner and js code for this" />
     <MESSAGE value="updated player stats styling and replay banner styling" />
     <MESSAGE value="added images for player stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="added images for player stats" />
+    <MESSAGE value="added new team logo images, updated svg tags, created control panel page with styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new team logo images, updated svg tags, created control panel page with styling" />
   </component>
 </project>

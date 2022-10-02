@@ -157,10 +157,10 @@ $(() => {
 		let orangePlayer1 = document.getElementById("orangePlayer1");
 		let orangePlayer2 = document.getElementById("orangePlayer2");
 		let orangePlayer3 = document.getElementById("orangePlayer3");
-		let activeBlue = "linear-gradient(to left, #0074f0 40%, #003EB3)";
-		let inactiveBlue = "#0074f0";
-		let activeOrange = "linear-gradient(to left, #ff5000 60%, #ff6904)";
-		let inactiveOrange = "#ff6904";
+		let activeBlue = "linear-gradient(to right, #525252, #bbbbbb)";
+		let inactiveBlue = "linear-gradient(to right, #003576, #007ad8)";
+		let activeOrange = "linear-gradient(to left, #525252, #bbbbbb)";
+		let inactiveOrange = "linear-gradient(to left, #ae5600, #f77400)";
 
 		var target = d['game']['target'];
         if(target != "" && d['game']['isReplay'] == false){
@@ -188,7 +188,7 @@ $(() => {
 		Object.keys(d['players']).forEach((id) => {
 		    if(d['players'][id].team == 0){
 		        blueMembers += 1;
-		        var gradientAmount = "linear-gradient(to right, orange " + d['players'][id].boost + "% , #595959 0% 100%)";
+		        var gradientAmount = "linear-gradient(to left, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
 		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-name-area-" + blueMembers +"  .overlay-blue-name-" + blueMembers +" .overlay-blue-name-" + blueMembers +"-text").text(d['players'][id].name);
 		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-goals-" + blueMembers +" .overlay-blue-goals-amount-" + blueMembers).text(d['players'][id].goals);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-shots-" + blueMembers +" .overlay-blue-shots-amount-" + blueMembers).text(d['players'][id].shots);
@@ -210,7 +210,6 @@ $(() => {
 		            orangePlayer3.style.background = inactiveOrange;
 		            if((blueMembers - 3) == 0){
 		                bluePlayer3.style.background = activeBlue;
-		                console.log(activeBlue);
 		                bluePlayer2.style.background = inactiveBlue;
 		                bluePlayer1.style.background = inactiveBlue;
 		            }else if((blueMembers - 3) == -1){
@@ -225,7 +224,7 @@ $(() => {
 		        }
 		    }else if(d['players'][id].team == 1){
                 orangeMembers += 1;
-                var gradientAmount = "linear-gradient(to right, #595959 " + (100 - d['players'][id].boost) + "%, orange 0% 100% )";
+                var gradientAmount = "linear-gradient(to right, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-name-area-" + orangeMembers +"  .overlay-orange-name-" + orangeMembers +" .overlay-orange-name-" + orangeMembers +"-text").text(d['players'][id].name);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-goals-" + orangeMembers +" .overlay-orange-goals-amount-" + orangeMembers).text(d['players'][id].goals);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-shots-" + orangeMembers +" .overlay-orange-shots-amount-" + orangeMembers).text(d['players'][id].shots);
@@ -269,10 +268,10 @@ $(() => {
     	  $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-scored-by-area .overlay-scored-by-player-name").text(scorer);
     	  let replayBanner = document.getElementById("replayBanner");
     	  if(e['scorer']['teamnum'] == 0){
-    	    var gradientAmount = "linear-gradient(to top, #0074f0, #0000 85%)";
+    	    var gradientAmount = "linear-gradient(to top, #003576, #0000 85%)";
     	    replayBanner.style.background = gradientAmount;
     	  }else{
-    	    var gradientAmount = "linear-gradient(to top, #ff6904, #0000 85%)";
+    	    var gradientAmount = "linear-gradient(to top, #ae5600, #0000 85%)";
     	    replayBanner.style.background = gradientAmount;
     	  }
           if(e['assister']['name'] == ""){
