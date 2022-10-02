@@ -17,20 +17,23 @@
         <div class="overlay-scoreboard-top">
           <div class="overlay-full-score-area">
             <div class="overlay-blue-scoreboard-area">
-              <div class="overlay-blue-series-score">
-                <span class="overlay-blue-g4">__</span>
-                <span class="overlay-blue-g3">__</span>
-                <span class="overlay-blue-b2">__</span>
-                <span class="overlay-blue-b1">__</span>
-              </div>
+              <div class="overlay-blue-spacer"></div>
               <div class="overlay-blue-logo-area">
                 <img src="Images/irish_wolfhounds_no_text.png" style="height:75px; width:auto;"/>
               </div>
-              <div class="overlay-blue-team-name-area">
-                <span class="overlay-blue-team-name">
-                  <span>Team Name</span>
-                  <br />
-                </span>
+              <div class="overlay-blue-team-info-area">
+                <div class="overlay-blue-team-name-area">
+                  <span class="overlay-blue-team-name">
+                    <span>Team Name</span>
+                    <br />
+                  </span>
+                </div>
+                <div class="overlay-blue-series-score">
+                  <span class="overlay-blue-g1">__</span>
+                  <span class="overlay-blue-g2">__</span>
+                  <span class="overlay-blue-g3">__</span>
+                  <span class="overlay-blue-g4">__</span>
+                </div>
               </div>
               <div class="overlay-blue-score-area">
                 <span class="overlay-blue-score">0</span>
@@ -43,21 +46,24 @@
               <div class="overlay-orange-score-area">
                 <span class="overlay-orange-score">0</span>
               </div>
-              <div class="overlay-orange-team-name-area">
-                <span class="overlay-orange-team-name">
-                  <span>Team Name</span>
-                  <br />
-                </span>
+              <div class="overlay-orange-team-info-area">
+                <div class="overlay-orange-team-name-area">
+                  <span class="overlay-orange-team-name">
+                    <span>Team Name</span>
+                    <br />
+                  </span>
+                </div>
+                <div class="overlay-orange-series-score">
+                  <span class="overlay-orange-g1">__</span>
+                  <span class="overlay-orange-g2">__</span>
+                  <span class="overlay-orange-g3">__</span>
+                  <span class="overlay-orange-g4">__</span>
+                </div>
               </div>
               <div class="overlay-orange-logo-area">
                 <img src="Images/the_high_kings_no_text.png" style="height:75px; width:auto;"/>
               </div>
-              <div class="overlay-orange-series-score">
-                <span class="overlay-orange-g4">__</span>
-                <span class="overlay-orange-g3">__</span>
-                <span class="overlay-orange-g2">__</span>
-                <span class="overlay-orange-g1">__</span>
-              </div>
+              <div class="overlay-orange-spacer"></div>
             </div>
           </div>
         </div>
@@ -87,26 +93,16 @@
     </div>
     <div class="controller-general-info">
       <div class="controller-left-spacer1"></div>
+      <div class="controller-auto-score-series-area"></div>
       <div class="controller-auto-set-names-area">
         <h1 class="controller-auto-set-names-text">
           <span>Auto Set Names</span>
           <br />
         </h1>
         <input
-        type="checkbox"
-        checked="true"
-        class="controller-chk-auto-set-names"
-        />
-      </div>
-      <div class="controller-auto-score-series-area">
-        <h1 class="controller-auto-score-series-text">
-          <span>Auto Score Series</span>
-          <br />
-        </h1>
-        <input
-        type="checkbox"
-        checked="true"
-        class="controller-chk-auto-score-series"
+                type="checkbox"
+                checked="true"
+                class="controller-chk-auto-set-names"
         />
       </div>
       <div class="controller-tourney-abbrv-area">
@@ -115,117 +111,187 @@
           <br />
         </h1>
         <input
-        type="text"
-        placeholder="placeholder"
-        class="controller-txt-tourney-abbrv input"
+                type="text"
+                placeholder="placeholder"
+                class="controller-txt-tourney-abbrv input"
         />
+        <button class="controller-button button">Set</button>
       </div>
       <div class="controller-tourney-stage-area">
         <h1 class="controller-tourney-stage-text">
           <span>Tournament Stage</span>
           <br />
         </h1>
-        <select class="controller-select-stage">
-          <option value="none">None</option>
-          <option value="group">Group Stage</option>
-          <option value="playoffs">Playoffs</option>
-          <option value="finals">Grand Finals</option>
-        </select>
+        <input
+                type="text"
+                placeholder="placeholder"
+                class="controller-txt-tourney-stage input"
+        />
+        <button class="controller-button01 button">Set</button>
       </div>
       <div class="controller-no-series-area">
         <button class="button">
-          <span>
+          <span class="controller-text14">
             <span>No Series</span>
             <br />
           </span>
         </button>
+        <button class="button">
+          <span class="controller-text17">Bo3</span>
+        </button>
+        <button class="button">
+          <span class="controller-text18">
+            <span>B05</span>
+            <br />
+          </span>
+        </button>
+        <button class="button">
+          <span class="controller-text21">
+            <span>Bo7</span>
+            <br />
+          </span>
+        </button>
       </div>
-      <div class="controller-series-area">
-        <h1 class="controller-series-type-text-text">
-          <span>Series Type</span>
-          <br />
-        </h1>
-        <select class="controller-select-series">
-          <option value="bo3">Bo3</option>
-          <option value="bo5">Bo5</option>
-          <option value="bo7">Bo7</option>
-          <option value="bo9">Bo9</option>
-        </select>
-      </div>
+      <div class="controller-series-area"></div>
       <div class="controller-right-spacer1"></div>
     </div>
     <div class="controller-overlay-body">
       <div class="controller-blue-controls">
-        <h1 class="controller-blue-controls-text">
-          <span>Blue Controls</span>
-          <br />
-        </h1>
-        <span class="controller-blue-name-text">
-          <span>Team Name</span>
-          <br />
-        </span>
-        <select>
-          <option value="celtic_tigers">Celtic Tigers</option>
-          <option value="irish_wolfhounds">Wolfhounds</option>
-          <option value="the_banshees">Banshees</option>
-          <option value="the_high_kings">High Kings</option>
-          <option value="the_saints">Saints</option>
-          <option value="setanta">Setanta</option>
-        </select>
-        <span class="controller-blue-score-text">
-          <span>Series Score</span>
-          <br />
-        </span>
-        <button class="button">
-          <span>
-            <span>+1 Game</span>
-            <br />
-          </span>
-        </button>
-        <button class="button">
-          <span>
-            <span>-1 Game</span>
-            <br />
-          </span>
-        </button>
+        <div class="controller-blue-team-names">
+          <div class="controller-container01">
+            <h1 class="controller-text24">
+              <span>Blue Team Names</span>
+              <br />
+            </h1>
+          </div>
+          <div class="controller-container02">
+            <button class="controller-button02 button">
+              <span class="controller-text27">
+                <span>Celtic Tigers</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button03 button">
+              <span class="controller-text30">Wolfhounds</span>
+            </button>
+            <button class="controller-button04 button">
+              <span class="controller-text31">
+                <span>Banshees</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button05 button">
+              <span class="controller-text34">
+                <span>High Kings</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button06 button">
+              <span class="controller-text37">
+                <span>Setanta</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button07 button">
+              <span class="controller-text40">
+                <span>Saints</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="controller-container03">
+          <div class="controller-container04">
+            <h1 class="controller-text43">
+              <span>Blue Series Score</span>
+              <br />
+            </h1>
+          </div>
+          <div class="controller-container05">
+            <button class="controller-button08 button">
+              <span class="controller-text46">
+                <span>+1 Game</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button09 button">
+              <span class="controller-text49">
+                <span>-1 Game</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="controller-container1">
-        <h1 class="controller-orange-controls-text">
-          <span>Orange Conrols</span>
-          <br />
-        </h1>
-        <span class="controller-orange-name-text">
-          <span>Team Name</span>
-          <br />
-        </span>
-        <select>
-          <option value="celtic_tigers">Celtic Tigers</option>
-          <option value="irish_wolfhounds">Wolfhounds</option>
-          <option value="the_banshees">Banshees</option>
-          <option value="the_high_kings">High Kings</option>
-          <option value="the_saints">Saints</option>
-          <option value="setanta">Setanta</option>
-        </select>
-        <span class="controller-orange-score-text">
-          <span>Series Score</span>
-          <br />
-        </span>
-        <button class="button">
-          <span>
-            <span>+1 Game</span>
-            <br />
-          </span>
-        </button>
-        <button class="button">
-          <span>
-            <span>-1 Game</span>
-            <br />
-          </span>
-        </button>
+      <div class="controller-orange-controls">
+        <div class="controller-container06">
+          <div class="controller-container07">
+            <h1 class="controller-text52">
+              <span>Orange Series Score</span>
+              <br />
+            </h1>
+          </div>
+          <div class="controller-container08">
+            <button class="controller-button10 button">
+              <span class="controller-text55">
+                <span>+1 Game</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button11 button">
+              <span class="controller-text58">
+                <span>-1 Game</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="controller-container09">
+          <div class="controller-container10">
+            <h1 class="controller-text61">
+              <span>Orange Team Names</span>
+              <br />
+            </h1>
+          </div>
+          <div class="controller-container11">
+            <button class="controller-button12 button">
+              <span class="controller-text64">
+                <span>Celtic Tigers</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button13 button">
+              <span class="controller-text67">Wolfhounds</span>
+            </button>
+            <button class="controller-button14 button">
+              <span class="controller-text68">
+                <span>Banshees</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button15 button">
+              <span class="controller-text71">
+                <span>High Kings</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button16 button">
+              <span class="controller-text74">
+                <span>Setanta</span>
+                <br />
+              </span>
+            </button>
+            <button class="controller-button17 button">
+              <span class="controller-text77">
+                <span>Saints</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 </body>
 </html>

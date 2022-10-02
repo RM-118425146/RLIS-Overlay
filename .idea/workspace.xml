@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="added new team logo images, updated svg tags, created control panel page with styling">
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="updated colours and changed scoreboard layout slightly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/Controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/Controller.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664644483675</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated colours and changed scoreboard layout slightly">
+      <created>1664736046633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664736046633</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -135,6 +141,7 @@
     <MESSAGE value="updated player stats styling and replay banner styling" />
     <MESSAGE value="added images for player stats" />
     <MESSAGE value="added new team logo images, updated svg tags, created control panel page with styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new team logo images, updated svg tags, created control panel page with styling" />
+    <MESSAGE value="updated colours and changed scoreboard layout slightly" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated colours and changed scoreboard layout slightly" />
   </component>
 </project>

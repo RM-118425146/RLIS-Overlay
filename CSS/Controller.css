@@ -77,47 +77,21 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: #0074f0;
-  background: linear-gradient(84deg, #0074f0 6% 95%, #000000c2 5%);
+  background: linear-gradient(84deg, #003576, #007ad8 95%, #000000c2 5% );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
 }
-.overlay-blue-series-score {
+.overlay-blue-spacer {
   flex: 0 0 auto;
-  width: 50px;
+  width: 25px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 75px;
   display: flex;
   align-items: center;
-  border-color: var(--dl-color-gray-black);
+  border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
   border-width: 0px;
   flex-direction: column;
   justify-content: flex-start;
-}
-.overlay-blue-g4 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-blue-g3 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-blue-b2 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-blue-b1 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
 }
 .overlay-blue-logo-area {
   width: 100px;
@@ -136,21 +110,85 @@
   align-self: center;
   object-fit: cover;
 }
+.overlay-blue-team-info-area {
+  flex: 0 0 auto;
+  width: 225px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .overlay-blue-team-name-area {
   flex: 0 0 auto;
-  width: 200px;
-  height: 100%;
+  width: 225px;
+  height: 50px;
   display: flex;
   align-items: center;
   border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
   border-width: 0px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 .overlay-blue-team-name {
   color: #ffffff;
   font-size: 25px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-blue-series-score {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
+}
+.overlay-blue-g1 {
+  top: -25px;
+  color: #ffffff;
+  right: 25px;
+  position: absolute;
+  font-size: 30px;
+  align-self: stretch;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-blue-g2 {
+  top: -25px;
+  color: #ffffff;
+  right: 75px;
+  position: absolute;
+  font-size: 30px;
+  align-self: stretch;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-blue-g3 {
+  top: -25px;
+  color: #ffffff;
+  right: 125px;
+  position: absolute;
+  font-size: 30px;
+  align-self: stretch;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-blue-g4 {
+  top: -25px;
+  color: #ffffff;
+  right: 175px;
+  position: absolute;
+  font-size: 30px;
+  align-self: stretch;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
@@ -166,7 +204,7 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: center;
-  background-color: #003eb3;
+  background-color: #003576;
   clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
 }
 .overlay-blue-score {
@@ -208,7 +246,8 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: #ff6904;
-  background: linear-gradient(277deg, #ff6904 6% 95%, #000000c2 5%);
+  background: linear-gradient(277deg, #ae5600, #f77400 95%, #000000c2 5% );
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 }
 .overlay-orange-score-area {
   width: 100px;
@@ -220,7 +259,7 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: center;
-  background-color: #ff5000;
+  background-color: #ae5600;
   clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
 }
 .overlay-orange-score {
@@ -230,21 +269,82 @@
   font-family: Quantico;
   font-weight: 700;
 }
+.overlay-orange-team-info-area {
+  flex: 0 0 auto;
+  width: 225px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .overlay-orange-team-name-area {
   flex: 0 0 auto;
-  width: 200px;
-  height: 100%;
+  width: 225px;
+  height: 50px;
   display: flex;
+  align-self: flex-start;
   align-items: center;
   border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
   border-width: 0px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 .overlay-orange-team-name {
   color: #ffffff;
   font-size: 25px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-orange-series-score {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
+}
+.overlay-orange-g1 {
+  top: -25px;
+  left: 25px;
+  color: #ffffff;
+  position: absolute;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-orange-g2 {
+  top: -25px;
+  left: 75px;
+  color: #ffffff;
+  position: absolute;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-orange-g3 {
+  top: -25px;
+  left: 125px;
+  color: #ffffff;
+  position: absolute;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.overlay-orange-g4 {
+  top: -25px;
+  left: 175px;
+  color: #ffffff;
+  position: absolute;
+  font-size: 30px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
@@ -267,9 +367,10 @@
   align-self: center;
   object-fit: cover;
 }
-.overlay-orange-series-score {
+.overlay-orange-spacer {
   flex: 0 0 auto;
-  width: 50px;
+  width: 25px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 75px;
   display: flex;
   align-items: center;
@@ -278,34 +379,6 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: flex-start;
-}
-.overlay-orange-g4 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-orange-g3 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-orange-g2 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
-}
-.overlay-orange-g1 {
-  font-size: 20px;
-  font-style: italic;
-  font-family: Quantico;
-  font-weight: 700;
-  line-height: 0.75;
 }
 .overlay-scoreboard-bottom {
   width: 100%;
@@ -419,7 +492,7 @@
 }
 .controller-general-info {
   width: 100%;
-  height: 172px;
+  height: 342px;
   display: flex;
   align-items: flex-start;
   border-color: rgba(120, 120, 120, 0.4);
@@ -428,6 +501,19 @@
   justify-content: flex-start;
 }
 .controller-left-spacer1 {
+  flex: 0 0 auto;
+  width: 240px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+  justify-content: center;
+}
+.controller-auto-score-series-area {
   flex: 0 0 auto;
   width: 240px;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -456,35 +542,9 @@
   color: #ffffff;
   font-size: 20px;
   text-align: center;
-  font-style: italic;
   font-family: Quantico;
-  font-weight: 700;
 }
 .controller-chk-auto-set-names {
-  width: 15%;
-  height: 15%;
-}
-.controller-auto-score-series-area {
-  flex: 0 0 auto;
-  width: 240px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-color: rgba(120, 120, 120, 0.4);
-  border-style: hidden;
-  border-width: 0px;
-  flex-direction: column;
-  justify-content: center;
-}
-.controller-auto-score-series-text {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
-}
-.controller-chk-auto-score-series {
   width: 15%;
   height: 15%;
 }
@@ -503,16 +563,21 @@
 .controller-tourney-abbrv-text {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  text-align: center;
   font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  text-align: center;
+  font-family: Quantico;
+  font-weight: 700;
 }
 .controller-txt-tourney-abbrv {
   width: 75%;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  font-size: 20px;
+  font-family: Quantico;
+}
+.controller-button {
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
 }
 .controller-tourney-stage-area {
   flex: 0 0 auto;
@@ -530,21 +595,25 @@
   color: #ffffff;
   font-size: 20px;
   text-align: center;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  font-family: Quantico;
 }
-.controller-select-stage {
+.controller-txt-tourney-stage {
   width: 75%;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  font-size: 20px;
+  font-family: Quantico;
+}
+.controller-button01 {
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
 }
 .controller-no-series-area {
   flex: 0 0 auto;
   width: 240px;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
@@ -552,9 +621,34 @@
   flex-direction: column;
   justify-content: center;
 }
+.controller-text14 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-text17 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-text18 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-text21 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
 .controller-series-area {
   flex: 0 0 auto;
   width: 240px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 100%;
   display: flex;
   align-items: center;
@@ -563,20 +657,6 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: center;
-}
-.controller-series-type-text-text {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
-}
-.controller-select-series {
-  width: 75%;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
 }
 .controller-right-spacer1 {
   flex: 0 0 auto;
@@ -593,7 +673,7 @@
 }
 .controller-overlay-body {
   width: 100%;
-  height: 766px;
+  height: 594px;
   display: flex;
   align-items: center;
   border-color: var(--dl-color-gray-black);
@@ -611,36 +691,14 @@
   border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
   border-width: 0px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
-.controller-blue-controls-text {
-  color: rgb(255, 255, 255);
-  padding-top: 150px;
-  padding-bottom: 30px;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
-}
-.controller-blue-name-text {
-  color: rgb(255, 255, 255);
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
-}
-.controller-blue-score-text {
-  color: rgb(255, 255, 255);
-  padding-top: 30px;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
-}
-.controller-container1 {
+.controller-blue-team-names {
   flex: 0 0 auto;
   width: 50%;
   height: 100%;
   display: flex;
-  align-self: center;
   align-items: center;
   border-color: rgba(120, 120, 120, 0.4);
   border-style: hidden;
@@ -648,24 +706,302 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.controller-orange-controls-text {
-  color: rgb(255, 255, 255);
-  padding-top: 150px;
-  padding-bottom: 30px;
-  font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+.controller-container01 {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
 }
-.controller-orange-name-text {
-  color: rgb(255, 255, 255);
+.controller-text24 {
+  color: #ffffff;
   font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  font-family: Quantico;
+  font-weight: 700;
 }
-.controller-orange-score-text {
-  color: rgb(255, 255, 255);
-  padding-top: 30px;
+.controller-container02 {
+  width: 100%;
+  height: 547px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.controller-button02 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text27 {
   font-style: italic;
-    font-family: Quantico;
-    font-weight: 700;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button03 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text30 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button04 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text31 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button05 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text34 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button06 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text37 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button07 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text40 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-container03 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+}
+.controller-container04 {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
+}
+.controller-text43 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-container05 {
+  width: 100%;
+  height: 547px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.controller-button08 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text46 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button09 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text49 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-orange-controls {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.controller-container06 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+}
+.controller-container07 {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
+}
+.controller-text52 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-container08 {
+  width: 100%;
+  height: 547px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.controller-button10 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text55 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button11 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text58 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-container09 {
+  flex: 0 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.controller-container10 {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  justify-content: center;
+}
+.controller-text61 {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-container11 {
+  width: 100%;
+  height: 547px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-color: rgba(120, 120, 120, 0.4);
+  border-style: hidden;
+  border-width: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.controller-button12 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text64 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button13 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text67 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button14 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text68 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button15 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text71 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button16 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text74 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-button17 {
+  width: 200px;
+  font-size: 25px;
+}
+.controller-text77 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
 }
