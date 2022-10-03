@@ -159,6 +159,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-blue-g2 {
   top: -25px;
@@ -170,6 +171,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-blue-g3 {
   top: -25px;
@@ -181,6 +183,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-blue-g4 {
   top: -25px;
@@ -192,6 +195,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-blue-score-area {
   flex: 0 0 auto;
@@ -318,6 +322,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-orange-g2 {
   top: -25px;
@@ -328,6 +333,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-orange-g3 {
   top: -25px;
@@ -338,6 +344,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-orange-g4 {
   top: -25px;
@@ -348,6 +355,7 @@
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
+  visibility: visible;
 }
 .overlay-orange-logo-area {
   flex: 0 0 auto;
@@ -537,6 +545,7 @@
   border-width: 0px;
   flex-direction: column;
   justify-content: center;
+  visibility: hidden;
 }
 .controller-auto-set-names-text {
   color: #ffffff;
