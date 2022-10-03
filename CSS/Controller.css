@@ -131,7 +131,9 @@
   justify-content: center;
 }
 .overlay-blue-team-name {
+  top: 15px;
   color: #ffffff;
+  position: absolute;
   font-size: 25px;
   font-style: italic;
   font-family: Quantico;
@@ -152,50 +154,57 @@
 .overlay-blue-g1 {
   top: -25px;
   color: #ffffff;
-  right: 25px;
+  right: -10px;
   position: absolute;
   font-size: 30px;
   align-self: stretch;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-blue-g2 {
   top: -25px;
   color: #ffffff;
-  right: 75px;
+  right: 40px;
   position: absolute;
   font-size: 30px;
   align-self: stretch;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-blue-g3 {
   top: -25px;
   color: #ffffff;
-  right: 125px;
+  right: 90px;
   position: absolute;
   font-size: 30px;
   align-self: stretch;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-blue-g4 {
   top: -25px;
   color: #ffffff;
-  right: 175px;
+  right: 140px;
   position: absolute;
   font-size: 30px;
   align-self: stretch;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
+}
+.overlay-blue-g5 {
+  top: -25px;
+  color: #ffffff;
+  right: 190px;
+  position: absolute;
+  font-size: 30px;
+  align-self: stretch;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
 }
 .overlay-blue-score-area {
   flex: 0 0 auto;
@@ -295,7 +304,9 @@
   justify-content: center;
 }
 .overlay-orange-team-name {
+  top: 15px;
   color: #ffffff;
+  position: absolute;
   font-size: 25px;
   font-style: italic;
   font-family: Quantico;
@@ -315,47 +326,53 @@
 }
 .overlay-orange-g1 {
   top: -25px;
-  left: 25px;
+  left: -10px;
   color: #ffffff;
   position: absolute;
   font-size: 30px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-orange-g2 {
   top: -25px;
-  left: 75px;
+  left: 40px;
   color: #ffffff;
   position: absolute;
   font-size: 30px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-orange-g3 {
   top: -25px;
-  left: 125px;
+  left: 90px;
   color: #ffffff;
   position: absolute;
   font-size: 30px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
 }
 .overlay-orange-g4 {
   top: -25px;
-  left: 175px;
+  left: 140px;
   color: #ffffff;
   position: absolute;
   font-size: 30px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;
-  visibility: visible;
+}
+.overlay-orange-g5 {
+  top: -25px;
+  left: 190px;
+  color: #ffffff;
+  position: absolute;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
 }
 .overlay-orange-logo-area {
   flex: 0 0 auto;
@@ -1010,6 +1027,12 @@
   font-size: 25px;
 }
 .controller-text77 {
+  font-style: italic;
+  font-family: Quantico;
+  font-weight: 700;
+}
+.controller-text78 {
+  font-size: 20px;
   font-style: italic;
   font-family: Quantico;
   font-weight: 700;

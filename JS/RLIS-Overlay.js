@@ -161,6 +161,8 @@ $(() => {
 		let inactiveBlue = "linear-gradient(to right, #003576, #007ad8)";
 		let activeOrange = "linear-gradient(to left, #683400, #b45500)";
 		let inactiveOrange = "linear-gradient(to left, #ae5600, #f77400)";
+		let demoedBlue = "linear-gradient(to left, #bbbbbb, #525252)";
+		let demoedOrange = "linear-gradient(to left, #525252, #bbbbbb)";
 
 		var target = d['game']['target'];
         if(target != "" && d['game']['isReplay'] == false){
@@ -196,14 +198,6 @@ $(() => {
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-saves-" + blueMembers +" .overlay-blue-saves-amount-" + blueMembers).text(d['players'][id].saves);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-boost-area-" + blueMembers +" .overlay-blue-boost-amount-" + blueMembers).text(d['players'][id].boost);
 
-		        if(blueMembers == 1){
-		            bluePlayerBoost1.style.background = gradientAmount;
-		        }else if(blueMembers == 2){
-		            bluePlayerBoost2.style.background = gradientAmount;
-		        }else if(blueMembers == 3){
-		            bluePlayerBoost3.style.background = gradientAmount;
-		        }
-
 		        if (d['players'][id].id == d['game']['target']) {
 		            orangePlayer1.style.background = inactiveOrange;
 		            orangePlayer2.style.background = inactiveOrange;
@@ -222,6 +216,15 @@ $(() => {
                         bluePlayer2.style.background = inactiveBlue;
 		            }
 		        }
+
+		        if(blueMembers == 1){
+                    bluePlayerBoost1.style.background = gradientAmount;
+                }else if(blueMembers == 2){
+                    bluePlayerBoost2.style.background = gradientAmount;
+                }else if(blueMembers == 3){
+                    bluePlayerBoost3.style.background = gradientAmount;
+                }
+
 		    }else if(d['players'][id].team == 1){
                 orangeMembers += 1;
                 var gradientAmount = "linear-gradient(to right, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
@@ -231,14 +234,6 @@ $(() => {
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-assists-" + orangeMembers +" .overlay-orange-assists-amount-" + orangeMembers).text(d['players'][id].assists);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-saves-" + orangeMembers +" .overlay-orange-saves-amount-" + orangeMembers).text(d['players'][id].saves);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-boost-area-" + orangeMembers +" .overlay-orange-boost-amount-" + orangeMembers).text(d['players'][id].boost);
-
-		        if(orangeMembers == 1){
-                    orangePlayerBoost1.style.background = gradientAmount;
-                }else if(orangeMembers == 2){
-                    orangePlayerBoost2.style.background = gradientAmount;
-                }else if(orangeMembers == 3){
-                    orangePlayerBoost3.style.background = gradientAmount;
-                }
 
                 if (d['players'][id].id == d['game']['target']) {
                     bluePlayer1.style.background = inactiveBlue;
@@ -258,9 +253,52 @@ $(() => {
                         orangePlayer3.style.background = inactiveOrange;
                     }
                 }
+
+                if(orangeMembers == 1){
+                    orangePlayerBoost1.style.background = gradientAmount;
+                }else if(orangeMembers == 2){
+                    orangePlayerBoost2.style.background = gradientAmount;
+                }else if(orangeMembers == 3){
+                    orangePlayerBoost3.style.background = gradientAmount;
+                }
 		    }
         });
 
+        blueMembers = 0;
+        orangeMembers = 0;
+        Object.keys(d['players']).forEach((id) => {
+            if(d['players'][id].team == 0){
+                blueMembers += 1;
+                if(blueMembers == 1){
+                    if(d['players'][id].isDead == true){
+                        bluePlayer1.style.background = demoedBlue;
+                    }
+                }else if(blueMembers == 2){
+                    if(d['players'][id].isDead == true){
+                        bluePlayer2.style.background = demoedBlue;
+                    }
+                }else if(blueMembers == 3){
+                    if(d['players'][id].isDead == true){
+                        bluePlayer3.style.background = demoedBlue;
+                    }
+                }
+            }else if(d['players'][id].team == 1){
+                orangeMembers += 1;
+                if(orangeMembers == 1){
+                    if(d['players'][id].isDead == true){
+                        orangePlayer1.style.background = demoedOrange;
+                    }
+                }else if(orangeMembers == 2){
+                    if(d['players'][id].isDead == true){
+                        orangePlayer2.style.background = demoedOrange;
+                    }
+                }else if(orangeMembers == 3){
+                    if(d['players'][id].isDead == true){
+                        orangePlayer3.style.background = demoedOrange;
+                    }
+                }
+            }
+        });
 	});
 
 	WsSubscribers.subscribe("game", "goal_scored", (e) => {
@@ -308,7 +346,7 @@ $(() => {
             var i = "Show Match";
             blueCount = 0;
             orangeCount = 0;
-            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "hidden";
             document.getElementById("blueG2").style.visibility = "hidden";
             document.getElementById("blueG3").style.visibility = "hidden";
@@ -331,69 +369,108 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO3";
-            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "hidden";
             document.getElementById("blueG4").style.visibility = "hidden";
+            document.getElementById("blueG5").style.visibility = "hidden";
             document.getElementById("orangeG1").style.visibility = "visible";
             document.getElementById("orangeG2").style.visibility = "visible";
             document.getElementById("orangeG3").style.visibility = "hidden";
             document.getElementById("orangeG4").style.visibility = "hidden";
+            document.getElementById("orangeG5").style.visibility = "hidden";
             document.getElementById("blueG1").style.color = "#ffffff";
             document.getElementById("blueG2").style.color = "#ffffff";
             document.getElementById("blueG3").style.color = "#ffffff";
             document.getElementById("blueG4").style.color = "#ffffff";
+            document.getElementById("blueG5").style.color = "#ffffff";
             document.getElementById("orangeG1").style.color = "#ffffff";
             document.getElementById("orangeG2").style.color = "#ffffff";
             document.getElementById("orangeG3").style.color = "#ffffff";
             document.getElementById("orangeG4").style.color = "#ffffff";
+            document.getElementById("orangeG5").style.color = "#ffffff";
     });
 
     WsSubscribers.subscribe("series", "bo5", (e) => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO5";
-            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
             document.getElementById("blueG4").style.visibility = "hidden";
+            document.getElementById("blueG5").style.visibility = "hidden";
             document.getElementById("orangeG1").style.visibility = "visible";
             document.getElementById("orangeG2").style.visibility = "visible";
             document.getElementById("orangeG3").style.visibility = "visible";
             document.getElementById("orangeG4").style.visibility = "hidden";
+            document.getElementById("orangeG5").style.visibility = "hidden";
             document.getElementById("blueG1").style.color = "#ffffff";
             document.getElementById("blueG2").style.color = "#ffffff";
             document.getElementById("blueG3").style.color = "#ffffff";
             document.getElementById("blueG4").style.color = "#ffffff";
+            document.getElementById("blueG5").style.color = "#ffffff";
             document.getElementById("orangeG1").style.color = "#ffffff";
             document.getElementById("orangeG2").style.color = "#ffffff";
             document.getElementById("orangeG3").style.color = "#ffffff";
             document.getElementById("orangeG4").style.color = "#ffffff";
+            document.getElementById("orangeG5").style.color = "#ffffff";
     });
 
     WsSubscribers.subscribe("series", "bo7", (e) => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO7";
-            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
             document.getElementById("blueG4").style.visibility = "visible";
+            document.getElementById("blueG5").style.visibility = "hidden";
             document.getElementById("orangeG1").style.visibility = "visible";
             document.getElementById("orangeG2").style.visibility = "visible";
             document.getElementById("orangeG3").style.visibility = "visible";
             document.getElementById("orangeG4").style.visibility = "visible";
+            document.getElementById("orangeG5").style.visibility = "hidden";
             document.getElementById("blueG1").style.color = "#ffffff";
             document.getElementById("blueG2").style.color = "#ffffff";
             document.getElementById("blueG3").style.color = "#ffffff";
             document.getElementById("blueG4").style.color = "#ffffff";
+            document.getElementById("blueG5").style.color = "#ffffff";
             document.getElementById("orangeG1").style.color = "#ffffff";
             document.getElementById("orangeG2").style.color = "#ffffff";
             document.getElementById("orangeG3").style.color = "#ffffff";
             document.getElementById("orangeG4").style.color = "#ffffff";
+            document.getElementById("orangeG5").style.color = "#ffffff";
+    });
+
+    WsSubscribers.subscribe("series", "bo9", (e) => {
+            blueCount = 0;
+            orangeCount = 0;
+            var i = "BO9";
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            document.getElementById("blueG1").style.visibility = "visible";
+            document.getElementById("blueG2").style.visibility = "visible";
+            document.getElementById("blueG3").style.visibility = "visible";
+            document.getElementById("blueG4").style.visibility = "visible";
+            document.getElementById("blueG5").style.visibility = "visible";
+            document.getElementById("orangeG1").style.visibility = "visible";
+            document.getElementById("orangeG2").style.visibility = "visible";
+            document.getElementById("orangeG3").style.visibility = "visible";
+            document.getElementById("orangeG4").style.visibility = "visible";
+            document.getElementById("orangeG5").style.visibility = "visible";
+            document.getElementById("blueG1").style.color = "#ffffff";
+            document.getElementById("blueG2").style.color = "#ffffff";
+            document.getElementById("blueG3").style.color = "#ffffff";
+            document.getElementById("blueG4").style.color = "#ffffff";
+            document.getElementById("blueG5").style.color = "#ffffff";
+            document.getElementById("orangeG1").style.color = "#ffffff";
+            document.getElementById("orangeG2").style.color = "#ffffff";
+            document.getElementById("orangeG3").style.color = "#ffffff";
+            document.getElementById("orangeG4").style.color = "#ffffff";
+            document.getElementById("orangeG5").style.color = "#ffffff";
     });
 
     WsSubscribers.subscribe("series", "BluePlus", (e) => {
@@ -401,6 +478,7 @@ $(() => {
         var blue2 = document.getElementById('blueG2');
         var blue3 = document.getElementById('blueG3');
         var blue4 = document.getElementById('blueG4');
+        var blue5 = document.getElementById('blueG5');
         if(blueCount == 0){
           blue1.style.color = "#2ed8ff";
           blueCount = 1;
@@ -413,6 +491,9 @@ $(() => {
         }else if(blueCount == 3){
           blue4.style.color = "#2ed8ff";
           blueCount = 4;
+        }else if(blueCount == 4){
+          blue5.style.color = "#2ed8ff";
+          blueCount = 5;
         }
     });
     WsSubscribers.subscribe("series", "BlueMinus", (e) => {
@@ -420,7 +501,11 @@ $(() => {
         var blue2 = document.getElementById('blueG2');
         var blue3 = document.getElementById('blueG3');
         var blue4 = document.getElementById('blueG4');
-        if(blueCount == 4){
+        var blue5 = document.getElementById('blueG5');
+        if(blueCount == 5){
+          blue5.style.color = "#ffffff";
+          blueCount = 4;
+        }else if(blueCount == 4){
           blue4.style.color = "#ffffff";
           blueCount = 3;
         }else if(blueCount == 3){
@@ -439,6 +524,7 @@ $(() => {
         var Orange2 = document.getElementById('orangeG2');
         var Orange3 = document.getElementById('orangeG3');
         var Orange4 = document.getElementById('orangeG4');
+        var Orange5 = document.getElementById('orangeG5');
         if(orangeCount == 0){
           Orange1.style.color = "#ffcd2e";
           orangeCount = 1;
@@ -451,14 +537,21 @@ $(() => {
         }else if(orangeCount == 3){
           Orange4.style.color = "#ffcd2e";
           orangeCount = 4;
-        }
+        }else if(orangeCount == 4){
+           Orange5.style.color = "#ffcd2e";
+           orangeCount = 5;
+       }
     });
     WsSubscribers.subscribe("series", "OrangeMinus", (e) => {
         var Orange1 = document.getElementById('orangeG1');
         var Orange2 = document.getElementById('orangeG2');
         var Orange3 = document.getElementById('orangeG3');
         var Orange4 = document.getElementById('orangeG4');
-        if(orangeCount == 4){
+        var Orange5 = document.getElementById('orangeG5');
+        if(orangeCount == 5){
+          Orange5.style.color = "#ffffff";
+          orangeCount = 4;
+        }else if(orangeCount == 4){
           Orange4.style.color = "#ffffff";
           orangeCount = 3;
         }else if(orangeCount == 3){
