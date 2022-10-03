@@ -308,7 +308,7 @@ $(() => {
             var i = "Show Match";
             blueCount = 0;
             orangeCount = 0;
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "hidden";
             document.getElementById("blueG2").style.visibility = "hidden";
             document.getElementById("blueG3").style.visibility = "hidden";
@@ -331,7 +331,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO3";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "hidden";
@@ -354,7 +354,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO5";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
@@ -377,7 +377,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO7";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
