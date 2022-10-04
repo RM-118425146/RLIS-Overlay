@@ -566,6 +566,7 @@
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to right, #003576, #007ad8);
+  visibility:hidden;
 }
 .overlay-blue-name-area-1 {
   flex: 0 0 auto;
@@ -755,6 +756,7 @@
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(to right, #003576, #007ad8);
+  visibility: hidden;
 }
 .overlay-blue-name-area-2 {
   flex: 0 0 auto;
@@ -938,6 +940,7 @@
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(to right, #003576, #007ad8);
+  visibility: hidden;
 }
 .overlay-blue-name-area-3 {
   flex: 0 0 auto;
@@ -1144,6 +1147,7 @@
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to left, #ae5600, #f77400);
+  visibility: hidden;
 }
 .overlay-orange-name-area-1 {
   flex: 0 0 auto;
@@ -1324,6 +1328,7 @@
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(to left, #ae5600, #f77400);
+  visibility: hidden;
 }
 .overlay-orange-name-area-2 {
   flex: 0 0 auto;
@@ -1504,6 +1509,7 @@
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(to left, #ae5600, #f77400);
+  visibility: hidden;
 }
 .overlay-orange-name-area-3 {
   flex: 0 0 auto;

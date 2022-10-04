@@ -165,31 +165,32 @@ $(() => {
 		let demoedOrange = "linear-gradient(to left, #525252, #bbbbbb)";
 
 		var target = d['game']['target'];
-        if(target != "" && d['game']['isReplay'] == false){
-            orangePlayer1.style.visibility = 'visible';
-            orangePlayer2.style.visibility = 'visible';
-            orangePlayer3.style.visibility = 'visible';
-            bluePlayer1.style.visibility = 'visible';
-            bluePlayer2.style.visibility = 'visible';
-            bluePlayer3.style.visibility = 'visible';
-        }else{
+        if(d['game']['isReplay'] == true){
             orangePlayer1.style.visibility = 'hidden';
             orangePlayer2.style.visibility = 'hidden';
             orangePlayer3.style.visibility = 'hidden';
-            orangePlayer1.style.background = inactiveOrange;
-            orangePlayer2.style.background = inactiveOrange;
-            orangePlayer3.style.background = inactiveOrange;
             bluePlayer1.style.visibility = 'hidden';
             bluePlayer2.style.visibility = 'hidden';
             bluePlayer3.style.visibility = 'hidden';
-            bluePlayer1.style.background = inactiveBlue;
-            bluePlayer2.style.background = inactiveBlue;
-            bluePlayer3.style.background = inactiveBlue;
+        }
+        if(d['game']['hasWinner'] == true){
+            orangePlayer1.style.visibility = 'hidden';
+            orangePlayer2.style.visibility = 'hidden';
+            orangePlayer3.style.visibility = 'hidden';
+            bluePlayer1.style.visibility = 'hidden';
+            bluePlayer2.style.visibility = 'hidden';
+            bluePlayer3.style.visibility = 'hidden';
         }
 
 		Object.keys(d['players']).forEach((id) => {
 		    if(d['players'][id].team == 0){
 		        blueMembers += 1;
+
+		        let currentBluePlayer = document.getElementById("bluePlayer" + blueMembers);
+		        if(d['game']['isReplay'] == false){
+                    currentBluePlayer.style.visibility = 'visible';
+                }
+
 		        var gradientAmount = "linear-gradient(to left, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
 		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-name-area-" + blueMembers +"  .overlay-blue-name-" + blueMembers +" .overlay-blue-name-" + blueMembers +"-text").text(d['players'][id].name);
 		        $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-blue-names .overlay-blue-name-" + blueMembers + "-area .overlay-blue-info-area-" + blueMembers +"  .overlay-blue-stats-" + blueMembers +" .overlay-blue-goals-" + blueMembers +" .overlay-blue-goals-amount-" + blueMembers).text(d['players'][id].goals);
@@ -227,6 +228,12 @@ $(() => {
 
 		    }else if(d['players'][id].team == 1){
                 orangeMembers += 1;
+
+                let currentOrangePlayer = document.getElementById("orangePlayer" + orangeMembers);
+                if(d['game']['isReplay'] == false){
+                    currentOrangePlayer.style.visibility = 'visible';
+                }
+
                 var gradientAmount = "linear-gradient(to right, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-name-area-" + orangeMembers +"  .overlay-orange-name-" + orangeMembers +" .overlay-orange-name-" + orangeMembers +"-text").text(d['players'][id].name);
                 $(".overlay-container .overlay-overlay-middle .overlay-name-info-area .overlay-orange-names .overlay-orange-name-" + orangeMembers + "-area .overlay-orange-info-area-" + orangeMembers +"  .overlay-orange-stats-" + orangeMembers +" .overlay-orange-goals-" + orangeMembers +" .overlay-orange-goals-amount-" + orangeMembers).text(d['players'][id].goals);
@@ -346,7 +353,7 @@ $(() => {
             var i = "Show Match";
             blueCount = 0;
             orangeCount = 0;
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "hidden";
             document.getElementById("blueG2").style.visibility = "hidden";
             document.getElementById("blueG3").style.visibility = "hidden";
@@ -369,7 +376,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO3";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "hidden";
@@ -396,7 +403,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO5";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
@@ -423,7 +430,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO7";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
@@ -450,7 +457,7 @@ $(() => {
             blueCount = 0;
             orangeCount = 0;
             var i = "BO9";
-            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
+            $(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-bottom .overlay-info-area .overlay-info-area-right .overlay-info-right-text").text(i);
             document.getElementById("blueG1").style.visibility = "visible";
             document.getElementById("blueG2").style.visibility = "visible";
             document.getElementById("blueG3").style.visibility = "visible";
