@@ -198,7 +198,7 @@ $(() => {
 		    }
         });
 
-        
+        /*
         let mainBg = document.getElementById("mainBg");
         var randomInt = 0;
         var bgName;
@@ -210,7 +210,7 @@ $(() => {
             console.log(mainBg.style.backgroundImage);
             bgCount += 1;
         }
-        
+        */
 	});
 
     WsSubscribers.subscribe("tournament", "abbrv", (e) => {
