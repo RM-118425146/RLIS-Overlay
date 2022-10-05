@@ -9,7 +9,7 @@
 - Set this as a browser source below gameplay and click interact
 
 ## [**Overlay Scoreboard:**](https://rm-118425146.github.io/RLIS-Overlay/Stats-Table.html)
-- Set this as a browser source below gameplay and click interact
+- Set this as a browser source in a new scene and switch to it as needed
 
 ### **How to set up overlay**
 
@@ -18,6 +18,7 @@
 - bakkesmod sos plugin
 - sos-ws-relay
 - Enviroment Variable that points to bakkesmodSDK
+- ButtonMash.dll
 
 **Links:**
 - [Bakkesmod sos plugin (requires manual install)](https://gitlab.com/bakkesplugins/sos/sos-plugin/-/releases)
