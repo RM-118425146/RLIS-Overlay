@@ -189,6 +189,7 @@ $(() => {
 		        let currentBluePlayer = document.getElementById("bluePlayer" + blueMembers);
 		        if(d['game']['isReplay'] == false){
                     currentBluePlayer.style.visibility = 'visible';
+                    currentBluePlayer.style.background = inactiveBlue;
                 }
 
 		        var gradientAmount = "linear-gradient(to left, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";
@@ -232,6 +233,7 @@ $(() => {
                 let currentOrangePlayer = document.getElementById("orangePlayer" + orangeMembers);
                 if(d['game']['isReplay'] == false){
                     currentOrangePlayer.style.visibility = 'visible';
+                    currentOrangePlayer.style.background = inactiveOrange;
                 }
 
                 var gradientAmount = "linear-gradient(to right, #2c2c2c " + (100 - d['players'][id].boost) + "%, #ffa500 0%, #e09100)";

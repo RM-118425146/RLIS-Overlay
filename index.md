@@ -1,6 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="Images/rli_logo.png">
   
-# <img src="Images/rli_logo.png" align="center" height="48" width="48"> **RLI Overlay Links** <img src="Images/rli_logo.png" align="center" height="48" width="48">
+# <img src="Images/rli_logo.png" align="center" height="48" width="48"> **RLIS Overlay Links** <img src="Images/rli_logo.png" align="center" height="48" width="48">
 
 ## [**RLI Overlay:**](https://rm-118425146.github.io/RLIS-Overlay/RLIS-Overlay.html)
 - set this as a browser source above gameplay
