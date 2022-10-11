@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="fixed small big with player cards not displaying correct background colour on kickoff">
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="updated index.md instructions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -310,10 +310,12 @@ $(() => {
         });
 	});
 
+    let assistBoolean = false;
 	WsSubscribers.subscribe("game", "goal_scored", (e) => {
 	      var scorer = " " + e['scorer']['name'];
     	  $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-scored-by-area .overlay-scored-by-player-name").text(scorer);
     	  let replayBanner = document.getElementById("replayBanner");
+    	  let assistArea = document.getElementById("assistArea");
     	  if(e['scorer']['teamnum'] == 0){
     	    var gradientAmount = "linear-gradient(to top, #003576, #0000 85%)";
     	    replayBanner.style.background = gradientAmount;
@@ -323,9 +325,12 @@ $(() => {
     	  }
           if(e['assister']['name'] == ""){
             $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text("None");
+            assistArea.style.visibility = "hidden";
+            assistBoolean = false;
           }else{
             var assister = " " + e['assister']['name'];
             $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-assist-area .overlay-assist-player-name").text(assister);
+            assistBoolean = true;
           }
           var goalSpeed = " " +  Math.round(e['goalspeed']) + " KM/H";
           $(".overlay-container .overlay-overlay-bottom .overlay-replay-banner .overlay-replay-stats-area .overlay-speed-area .overlay-speed-value").text(goalSpeed);
@@ -334,11 +339,16 @@ $(() => {
 	WsSubscribers.subscribe("game", "replay_start", (e) => {
         let replayBanner = document.getElementById("replayBanner");
         replayBanner.style.visibility = 'visible';
+        console.log(assistBoolean);
+        if(assistBoolean == true){
+            assistArea.style.visibility = "visible";
+        }
     });
 
     WsSubscribers.subscribe("game", "replay_end", (e) => {
         let replayBanner = document.getElementById("replayBanner");
         replayBanner.style.visibility = 'hidden'
+        assistArea.style.visibility = "hidden";
     });
 
     WsSubscribers.subscribe("tournament", "abbrv", (e) => {
