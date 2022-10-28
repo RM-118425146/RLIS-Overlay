@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="updated index.md instructions">
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="hides assister in replay area when there is no assist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/Controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/Controller.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Stats-Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Stats-Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664980091462</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="hides assister in replay area when there is no assist">
+      <created>1665506906600</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665506906600</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -195,6 +205,7 @@
     <MESSAGE value="Added b09 option &amp; demo indicator" />
     <MESSAGE value="Added scoreboard for end of game" />
     <MESSAGE value="fixed small big with player cards not displaying correct background colour on kickoff" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed small big with player cards not displaying correct background colour on kickoff" />
+    <MESSAGE value="hides assister in replay area when there is no assist" />
+    <option name="LAST_COMMIT_MESSAGE" value="hides assister in replay area when there is no assist" />
   </component>
 </project>

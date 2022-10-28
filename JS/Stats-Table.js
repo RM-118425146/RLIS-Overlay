@@ -119,17 +119,25 @@ const WsSubscribers = {
     }
 };
 
-
+var autoNames = true;
 $(() => {
 	WsSubscribers.init(49322, true)
 	var bgCount = 0;
 	WsSubscribers.subscribe("game", "update_state", (d) => {
 	    var blueName = d['game']['teams'][0]['name'];
 	    var orangeName = d['game']['teams'][1]['name'];
-		/*$(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-team-name-area .overlay-blue-team-name").text(blueName);*/
 		$(".stats-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-score-area .overlay-blue-score").text(d['game']['teams'][0]['score']);
-		/*$(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-team-name-area .overlay-orange-team-name").text(orangeName);*/
 		$(".stats-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-score-area .overlay-orange-score").text(d['game']['teams'][1]['score']);
+
+        if(autoNames == true){
+            $(".stats-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-team-name-area .overlay-blue-team-name").text(blueName);
+            $(".stats-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-team-name-area .overlay-orange-team-name").text(orangeName);
+
+            var orangeImg = document.getElementById('orangeImg');
+            var blueImg = document.getElementById('blueImg');
+            blueImg.src = "Images/rli_logo.png";
+            orangeImg.src = "Images/rli_logo.png";
+        }
 
 		var timeLeft = parseInt(d['game']['time_seconds']);
 		var m = Math.floor(timeLeft/60);
@@ -524,7 +532,9 @@ $(() => {
         orangeName.innerHTML = "The Saints";
         orangeImg.src = "Images/the_saints_no_text.png";
     });
-
+    WsSubscribers.subscribe("Scoreboard", "Names", (e) => {
+            autoNames = e;
+    });
 });
 
 function randomIntFromInterval(min, max) {

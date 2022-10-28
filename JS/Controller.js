@@ -119,15 +119,25 @@ const WsSubscribers = {
     }
 };
 
+var autoNames = true;
 WsSubscribers.init(49322, true)
 $(() => {
 	WsSubscribers.subscribe("game", "update_state", (d) => {
 	    var blueName = d['game']['teams'][0]['name'];
 	    var orangeName = d['game']['teams'][1]['name'];
-		/*$(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-team-name-area .overlay-blue-team-name").text(blueName);*/
 		$(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-score-area .overlay-blue-score").text(d['game']['teams'][0]['score']);
-		/*$(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-team-name-area .overlay-orange-team-name").text(orangeName);*/
 		$(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-score-area .overlay-orange-score").text(d['game']['teams'][1]['score']);
+
+        if(autoNames == true){
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-blue-scoreboard-area .overlay-blue-team-name-area .overlay-blue-team-name").text(blueName);
+            $(".controller-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-orange-scoreboard-area .overlay-orange-team-name-area .overlay-orange-team-name").text(orangeName);
+
+            var orangeImg = document.getElementById('orangeImg');
+            var blueImg = document.getElementById('blueImg');
+            blueImg.src = "Images/rli_logo.png";
+            orangeImg.src = "Images/rli_logo.png";
+        }
+
 
 		var timeLeft = parseInt(d['game']['time_seconds']);
 		var m = Math.floor(timeLeft/60);
@@ -415,7 +425,7 @@ $(".controller-container .controller-overlay-body .controller-blue-controls .con
 $(".controller-container .controller-overlay-body .controller-blue-controls .controller-blue-team-names .controller-container02 .controller-button04").click(function(){
     var i = 1;
     var blueName = document.getElementById('blueTeamName');
-    var blueImg = document.getElementById('blueImg');;
+    var blueImg = document.getElementById('blueImg');
     blueName.innerHTML = "Banshees";
     blueImg.src = "Images/the_banshees_no_text.png";
     WsSubscribers.send("Team", "blueBanshee", i);
@@ -488,8 +498,27 @@ $(".controller-container .controller-overlay-body .controller-orange-controls .c
 $(".controller-container .controller-overlay-body .controller-orange-controls .controller-container09 .controller-container11 .controller-button17").click(function(){
     var i = 1;
     var orangeName = document.getElementById('orangeTeamName');
-    var orangeImg = document.getElementById('orangeImg');;
+    var orangeImg = document.getElementById('orangeImg');
     orangeName.innerHTML = "The Saints";
     orangeImg.src = "Images/the_saints_no_text.png";
     WsSubscribers.send("Team", "orangeSaints", i);
+});
+
+$(".controller-container .controller-overlay-body .controller-orange-controls .controller-container09 .controller-container11 .controller-button17").click(function(){
+    var i = 1;
+    var orangeName = document.getElementById('orangeTeamName');
+    var orangeImg = document.getElementById('orangeImg');
+    orangeName.innerHTML = "The Saints";
+    orangeImg.src = "Images/the_saints_no_text.png";
+    WsSubscribers.send("Team", "orangeSaints", i);
+});
+
+$('#autoNames').click(function() {
+    if ($('#autoNames').prop('checked') == true) {
+      autoNames = true;
+      WsSubscribers.send("Scoreboard", "Names", autoNames);
+    } else {
+      autoNames = false;
+      WsSubscribers.send("Scoreboard", "Names", autoNames);
+    }
 });
