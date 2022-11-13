@@ -1,4 +1,3 @@
-const obs = new OBSWebSocket();
 const WsSubscribers = {
     __subscribers: {},
     websocket: undefined,
@@ -672,25 +671,3 @@ $(() => {
     });
 
 });
-
-
-async function connectobs() {
-    try {
-        const {
-          obsWebSocketVersion,
-          negotiatedRpcVersion
-        } = await obs.connect('ws://ip:port', 'password', {
-          rpcVersion: 1
-        });
-        console.log(`Connected to server ${obsWebSocketVersion} (using RPC ${negotiatedRpcVersion})`)
-      } catch (error) {
-        console.error('Failed to connect', error.code, error.message);
-      }
-  }
-  connectobs();
-WsSubscribers.subscribe("game", "replay_start", (d) => {
-    async function savebuffer() {
-        await obs.call('SaveReplayBuffer');
-    }
-    savebuffer();
-})
