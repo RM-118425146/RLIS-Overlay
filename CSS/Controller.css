@@ -153,7 +153,7 @@
 }
 .overlay-blue-g1 {
   top: -25px;
-  color: #ffffff;
+  color: #000;
   right: -10px;
   position: absolute;
   font-size: 30px;
@@ -164,7 +164,7 @@
 }
 .overlay-blue-g2 {
   top: -25px;
-  color: #ffffff;
+  color: #000;
   right: 40px;
   position: absolute;
   font-size: 30px;
@@ -175,7 +175,7 @@
 }
 .overlay-blue-g3 {
   top: -25px;
-  color: #ffffff;
+  color: #000;
   right: 90px;
   position: absolute;
   font-size: 30px;
@@ -186,7 +186,7 @@
 }
 .overlay-blue-g4 {
   top: -25px;
-  color: #ffffff;
+  color: #000;
   right: 140px;
   position: absolute;
   font-size: 30px;
@@ -197,7 +197,7 @@
 }
 .overlay-blue-g5 {
   top: -25px;
-  color: #ffffff;
+  color: #000;
   right: 190px;
   position: absolute;
   font-size: 30px;
@@ -327,7 +327,7 @@
 .overlay-orange-g1 {
   top: -25px;
   left: -10px;
-  color: #ffffff;
+  color: #000;
   position: absolute;
   font-size: 30px;
   font-style: italic;
@@ -337,7 +337,7 @@
 .overlay-orange-g2 {
   top: -25px;
   left: 40px;
-  color: #ffffff;
+  color: #000;
   position: absolute;
   font-size: 30px;
   font-style: italic;
@@ -347,7 +347,7 @@
 .overlay-orange-g3 {
   top: -25px;
   left: 90px;
-  color: #ffffff;
+  color: #000;
   position: absolute;
   font-size: 30px;
   font-style: italic;
@@ -357,7 +357,7 @@
 .overlay-orange-g4 {
   top: -25px;
   left: 140px;
-  color: #ffffff;
+  color: #000;
   position: absolute;
   font-size: 30px;
   font-style: italic;
@@ -367,7 +367,7 @@
 .overlay-orange-g5 {
   top: -25px;
   left: 190px;
-  color: #ffffff;
+  color: #000;
   position: absolute;
   font-size: 30px;
   font-style: italic;

@@ -178,18 +178,22 @@ $(".controller-container .controller-general-info .controller-no-series-area .bu
         document.getElementById("blueG2").style.visibility = "hidden";
         document.getElementById("blueG3").style.visibility = "hidden";
         document.getElementById("blueG4").style.visibility = "hidden";
+        document.getElementById("blueG5").style.visibility = "hidden";
         document.getElementById("orangeG1").style.visibility = "hidden";
         document.getElementById("orangeG2").style.visibility = "hidden";
         document.getElementById("orangeG3").style.visibility = "hidden";
         document.getElementById("orangeG4").style.visibility = "hidden";
-        document.getElementById("blueG1").style.color = "#ffffff";
-        document.getElementById("blueG2").style.color = "#ffffff";
-        document.getElementById("blueG3").style.color = "#ffffff";
-        document.getElementById("blueG4").style.color = "#ffffff";
-        document.getElementById("orangeG1").style.color = "#ffffff";
-        document.getElementById("orangeG2").style.color = "#ffffff";
-        document.getElementById("orangeG3").style.color = "#ffffff";
-        document.getElementById("orangeG4").style.color = "#ffffff";
+        document.getElementById("orangeG5").style.visibility = "hidden";
+        document.getElementById("blueG1").style.color = "#000";
+        document.getElementById("blueG2").style.color = "#000";
+        document.getElementById("blueG3").style.color = "#000";
+        document.getElementById("blueG4").style.color = "#000";
+        document.getElementById("blueG5").style.color = "#000";
+        document.getElementById("orangeG1").style.color = "#000";
+        document.getElementById("orangeG2").style.color = "#000";
+        document.getElementById("orangeG3").style.color = "#000";
+        document.getElementById("orangeG4").style.color = "#000";
+        document.getElementById("orangeG5").style.color = "#000";
         WsSubscribers.send("series", "none", i);
 });
 
@@ -208,16 +212,16 @@ $(".controller-container .controller-general-info .controller-no-series-area .bu
         document.getElementById("orangeG3").style.visibility = "hidden";
         document.getElementById("orangeG4").style.visibility = "hidden";
         document.getElementById("orangeG5").style.visibility = "hidden";
-        document.getElementById("blueG1").style.color = "#ffffff";
-        document.getElementById("blueG2").style.color = "#ffffff";
-        document.getElementById("blueG3").style.color = "#ffffff";
-        document.getElementById("blueG4").style.color = "#ffffff";
-        document.getElementById("blueG5").style.color = "#ffffff";
-        document.getElementById("orangeG1").style.color = "#ffffff";
-        document.getElementById("orangeG2").style.color = "#ffffff";
-        document.getElementById("orangeG3").style.color = "#ffffff";
-        document.getElementById("orangeG4").style.color = "#ffffff";
-        document.getElementById("orangeG5").style.color = "#ffffff";
+        document.getElementById("blueG1").style.color = "#000";
+        document.getElementById("blueG2").style.color = "#000";
+        document.getElementById("blueG3").style.color = "#000";
+        document.getElementById("blueG4").style.color = "#000";
+        document.getElementById("blueG5").style.color = "#000";
+        document.getElementById("orangeG1").style.color = "#000";
+        document.getElementById("orangeG2").style.color = "#000";
+        document.getElementById("orangeG3").style.color = "#000";
+        document.getElementById("orangeG4").style.color = "#000";
+        document.getElementById("orangeG5").style.color = "#000";
         WsSubscribers.send("series", "bo3", i);
 });
 
@@ -236,16 +240,16 @@ $(".controller-container .controller-general-info .controller-no-series-area .bu
         document.getElementById("orangeG3").style.visibility = "visible";
         document.getElementById("orangeG4").style.visibility = "hidden";
         document.getElementById("orangeG5").style.visibility = "hidden";
-        document.getElementById("blueG1").style.color = "#ffffff";
-        document.getElementById("blueG2").style.color = "#ffffff";
-        document.getElementById("blueG3").style.color = "#ffffff";
-        document.getElementById("blueG4").style.color = "#ffffff";
-        document.getElementById("blueG5").style.color = "#ffffff";
-        document.getElementById("orangeG1").style.color = "#ffffff";
-        document.getElementById("orangeG2").style.color = "#ffffff";
-        document.getElementById("orangeG3").style.color = "#ffffff";
-        document.getElementById("orangeG4").style.color = "#ffffff";
-        document.getElementById("orangeG5").style.color = "#ffffff";
+        document.getElementById("blueG1").style.color = "#000";
+        document.getElementById("blueG2").style.color = "#000";
+        document.getElementById("blueG3").style.color = "#000";
+        document.getElementById("blueG4").style.color = "#000";
+        document.getElementById("blueG5").style.color = "#000";
+        document.getElementById("orangeG1").style.color = "#000";
+        document.getElementById("orangeG2").style.color = "#000";
+        document.getElementById("orangeG3").style.color = "#000";
+        document.getElementById("orangeG4").style.color = "#000";
+        document.getElementById("orangeG5").style.color = "#000";
         WsSubscribers.send("series", "bo5", i);
 });
 
@@ -264,16 +268,16 @@ $(".controller-container .controller-general-info .controller-no-series-area .bu
         document.getElementById("orangeG3").style.visibility = "visible";
         document.getElementById("orangeG4").style.visibility = "visible";
         document.getElementById("orangeG5").style.visibility = "hidden";
-        document.getElementById("blueG1").style.color = "#ffffff";
-        document.getElementById("blueG2").style.color = "#ffffff";
-        document.getElementById("blueG3").style.color = "#ffffff";
-        document.getElementById("blueG4").style.color = "#ffffff";
-        document.getElementById("blueG5").style.color = "#ffffff";
-        document.getElementById("orangeG1").style.color = "#ffffff";
-        document.getElementById("orangeG2").style.color = "#ffffff";
-        document.getElementById("orangeG3").style.color = "#ffffff";
-        document.getElementById("orangeG4").style.color = "#ffffff";
-        document.getElementById("orangeG5").style.color = "#ffffff";
+        document.getElementById("blueG1").style.color = "#000";
+        document.getElementById("blueG2").style.color = "#000";
+        document.getElementById("blueG3").style.color = "#000";
+        document.getElementById("blueG4").style.color = "#000";
+        document.getElementById("blueG5").style.color = "#000";
+        document.getElementById("orangeG1").style.color = "#000";
+        document.getElementById("orangeG2").style.color = "#000";
+        document.getElementById("orangeG3").style.color = "#000";
+        document.getElementById("orangeG4").style.color = "#000";
+        document.getElementById("orangeG5").style.color = "#000";
         WsSubscribers.send("series", "bo7", i);
 });
 
@@ -292,16 +296,16 @@ $(".controller-container .controller-general-info .controller-no-series-area .bu
         document.getElementById("orangeG3").style.visibility = "visible";
         document.getElementById("orangeG4").style.visibility = "visible";
         document.getElementById("orangeG5").style.visibility = "visible";
-        document.getElementById("blueG1").style.color = "#ffffff";
-        document.getElementById("blueG2").style.color = "#ffffff";
-        document.getElementById("blueG3").style.color = "#ffffff";
-        document.getElementById("blueG4").style.color = "#ffffff";
-        document.getElementById("blueG5").style.color = "#ffffff";
-        document.getElementById("orangeG1").style.color = "#ffffff";
-        document.getElementById("orangeG2").style.color = "#ffffff";
-        document.getElementById("orangeG3").style.color = "#ffffff";
-        document.getElementById("orangeG4").style.color = "#ffffff";
-        document.getElementById("orangeG5").style.color = "#ffffff";
+        document.getElementById("blueG1").style.color = "#000";
+        document.getElementById("blueG2").style.color = "#000";
+        document.getElementById("blueG3").style.color = "#000";
+        document.getElementById("blueG4").style.color = "#000";
+        document.getElementById("blueG5").style.color = "#000";
+        document.getElementById("orangeG1").style.color = "#000";
+        document.getElementById("orangeG2").style.color = "#000";
+        document.getElementById("orangeG3").style.color = "#000";
+        document.getElementById("orangeG4").style.color = "#000";
+        document.getElementById("orangeG5").style.color = "#000";
         WsSubscribers.send("series", "bo9", i);
 });
 
@@ -338,19 +342,19 @@ $(".controller-container .controller-overlay-body .controller-blue-controls .con
     var blue4 = document.getElementById('blueG4');
     var blue5 = document.getElementById('blueG5');
     if(blueCount == 5){
-      blue5.style.color = "#ffffff";
+      blue5.style.color = "#000";
       blueCount = 4;
     }else if(blueCount == 4){
-      blue4.style.color = "#ffffff";
+      blue4.style.color = "#000";
       blueCount = 3;
     }else if(blueCount == 3){
-      blue3.style.color = "#ffffff";
+      blue3.style.color = "#000";
       blueCount = 2;
     }else if(blueCount == 2){
-      blue2.style.color = "#ffffff";
+      blue2.style.color = "#000";
       blueCount = 1;
     }else if(blueCount == 1){
-      blue1.style.color = "#ffffff";
+      blue1.style.color = "#000";
       blueCount = 0;
     }
     WsSubscribers.send("series", "BlueMinus", i);
@@ -388,19 +392,19 @@ $(".controller-container .controller-overlay-body .controller-orange-controls .c
     var Orange4 = document.getElementById('orangeG4');
     var Orange5 = document.getElementById('orangeG5');
     if(orangeCount == 5){
-      Orange5.style.color = "#ffffff";
+      Orange5.style.color = "#000";
       orangeCount = 4;
     }else if(orangeCount == 4){
-      Orange4.style.color = "#ffffff";
+      Orange4.style.color = "#000";
       orangeCount = 3;
     }else if(orangeCount == 3){
-      Orange3.style.color = "#ffffff";
+      Orange3.style.color = "#000";
       orangeCount = 2;
     }else if(orangeCount == 2){
-      Orange2.style.color = "#ffffff";
+      Orange2.style.color = "#000";
       orangeCount = 1;
     }else if(orangeCount == 1){
-      Orange1.style.color = "#ffffff";
+      Orange1.style.color = "#000";
       orangeCount = 0;
     }
     WsSubscribers.send("series", "OrangeMinus", i);
