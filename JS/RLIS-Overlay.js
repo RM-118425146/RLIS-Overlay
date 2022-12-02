@@ -171,6 +171,8 @@ $(() => {
 		let inactiveOrange = "linear-gradient(to left, #ae5600, #f77400)";
 		let demoedBlue = "linear-gradient(to left, #bbbbbb, #525252)";
 		let demoedOrange = "linear-gradient(to left, #525252, #bbbbbb)";
+		let testActiveBlue = "linear-gradient(to left, #bbbbbb, #525252)";
+		let testActiveOrange = "linear-gradient(to left, #ae5600, #f77400)";
 
 		let blueSpectating = document.getElementById("blueSpectating");
 		let blueSpectatingName = document.getElementById("blueSpectatingName");

@@ -1707,12 +1707,12 @@
   display: flex;
   align-items: center;
   border-color: #fff;
-  border-style: solid;
+  border-style: hidden;
   border-width: 2px;
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to right, #003576, #007ad8);
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
   visibility: hidden;
 }
 .overlay-blue-spectating-name-area {
@@ -1746,7 +1746,7 @@
 }
 .overlay-spectating-spacer {
   flex: 0 0 auto;
-  width: 1510px;
+  width: 1520px;
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -1762,12 +1762,12 @@
   display: flex;
   align-items: center;
   border-color: #fff;
-  border-style: solid;
+  border-style: hidden;
   border-width: 2px;
   flex-direction: column;
   justify-content: center;
   background: linear-gradient(to left, #ae5600, #f77400);
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
   visibility: hidden;
 }
 .overlay-orange-spectating-name-area {
