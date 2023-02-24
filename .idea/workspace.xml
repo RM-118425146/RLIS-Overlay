@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="added spectator cards and made series core easier to read">
+    <list default="true" id="0c1f7bbb-8752-4537-ba9b-ef677937f2d3" name="Changes" comment="slight change to spectator card">
+      <change afterPath="$PROJECT_DIR$/Images/MoojuLogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/RLIS-Overlay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS/RLIS-Overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/RLIS-Overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Stats-Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Stats-Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RLIS-Overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/RLIS-Overlay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669843881760</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="slight change to spectator card">
+      <created>1670016647952</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670016647952</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -219,6 +229,7 @@
     <MESSAGE value="hides assister in replay area when there is no assist" />
     <MESSAGE value="added auto set names function" />
     <MESSAGE value="added spectator cards and made series core easier to read" />
-    <option name="LAST_COMMIT_MESSAGE" value="added spectator cards and made series core easier to read" />
+    <MESSAGE value="slight change to spectator card" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight change to spectator card" />
   </component>
 </project>

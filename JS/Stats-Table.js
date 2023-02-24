@@ -135,8 +135,8 @@ $(() => {
 
             var orangeImg = document.getElementById('orangeImg');
             var blueImg = document.getElementById('blueImg');
-            blueImg.src = "Images/rli_logo.png";
-            orangeImg.src = "Images/rli_logo.png";
+            blueImg.src = "Images/MoojuLogo.png";
+            orangeImg.src = "Images/MoojuLogo.png";
         }
 
 		var timeLeft = parseInt(d['game']['time_seconds']);
