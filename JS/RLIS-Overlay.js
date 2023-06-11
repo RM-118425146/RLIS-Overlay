@@ -619,8 +619,8 @@ $(() => {
     WsSubscribers.subscribe("Team", "blueCeltic", (e) => {
         var blueName = document.getElementById('blueTeamName');
         var blueImg = document.getElementById('blueImg');;
-        blueName.innerHTML = "Celtic Tigers";
-        blueImg.src = "Images/celtic_tigers_no_text.png";
+        blueName.innerHTML = "Na Fianna";
+        blueImg.src = "Images/na_fianna_no_text.png";
     });
     WsSubscribers.subscribe("Team", "blueWolf", (e) => {
         var blueName = document.getElementById('blueTeamName');
@@ -656,8 +656,8 @@ $(() => {
     WsSubscribers.subscribe("Team", "orangeCeltic", (e) => {
         var orangeName = document.getElementById('orangeTeamName');
         var orangeImg = document.getElementById('orangeImg');;
-        orangeName.innerHTML = "Celtic Tigers";
-        orangeImg.src = "Images/celtic_tigers_no_text.png";
+        orangeName.innerHTML = "Na Fianna";
+        orangeImg.src = "Images/na_fianna_no_text.png";
     });
     WsSubscribers.subscribe("Team", "orangeWolf", (e) => {
         var orangeName = document.getElementById('orangeTeamName');

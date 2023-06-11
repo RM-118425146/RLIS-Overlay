@@ -414,8 +414,8 @@ $(".controller-container .controller-overlay-body .controller-blue-controls .con
     var i = 1;
     var blueName = document.getElementById('blueTeamName');
     var blueImg = document.getElementById('blueImg');;
-    blueName.innerHTML = "Celtic Tigers";
-    blueImg.src = "Images/celtic_tigers_no_text.png";
+    blueName.innerHTML = "Na Fianna";
+    blueImg.src = "Images/na_fianna_no_text.png";
     WsSubscribers.send("Team", "blueCeltic", i);
 });
 $(".controller-container .controller-overlay-body .controller-blue-controls .controller-blue-team-names .controller-container02 .controller-button03").click(function(){
@@ -463,8 +463,8 @@ $(".controller-container .controller-overlay-body .controller-orange-controls .c
     var i = 1;
     var orangeName = document.getElementById('orangeTeamName');
     var orangeImg = document.getElementById('orangeImg');;
-    orangeName.innerHTML = "Celtic Tigers";
-    orangeImg.src = "Images/celtic_tigers_no_text.png";
+    orangeName.innerHTML = "Na Fianna";
+    orangeImg.src = "Images/na_fianna_no_text.png";
     WsSubscribers.send("Team", "orangeCeltic", i);
 });
 $(".controller-container .controller-overlay-body .controller-orange-controls .controller-container09 .controller-container11 .controller-button13").click(function(){
