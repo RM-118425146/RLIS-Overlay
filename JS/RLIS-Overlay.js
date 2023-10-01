@@ -145,7 +145,7 @@ $(() => {
 		s = "0" + s;
 		}
 		var TimeLeft = m + ":" + s;
-		if(d['game']['isOT'] == "true"){
+		if(d['game']['isOT'] == true){
 		TimeLeft = "+" + TimeLeft;
 		}
 		$(".overlay-container .overlay-overlay-top .overlay-scoreboard .overlay-scoreboard-top .overlay-full-score-area .overlay-timer-area .overlay-timer").text(TimeLeft);
